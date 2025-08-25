@@ -1,0 +1,373 @@
+2025-08-24 11:28:24,451 - INFO - 1-get_arpege:47 - --- Script '1-get_arpege.py' started ---
+2025-08-24 11:28:24,451 - INFO - 1-get_arpege:48 - Logger configured. All logs for this workflow will be saved to: /home/aoumeur/BQRM_V01/sonelgaz/logs/sonelgaz_20250824_112824.log
+2025-08-24 11:28:24,451 - INFO - 1-get_arpege:49 - Current working directory: /home/aoumeur/BQRM_V01/sonelgaz/scr
+2025-08-24 11:28:24,451 - INFO - 1-get_arpege:50 - Script directory: /home/aoumeur/BQRM_V01/sonelgaz/scr
+2025-08-24 11:28:24,451 - INFO - 1-get_arpege:51 - Parent directory dynamically set to: /home/aoumeur/BQRM_V01/sonelgaz
+2025-08-24 11:28:24,451 - INFO - 1-get_arpege:52 - Temporary directory for FTP download: /home/aoumeur/BQRM_V01/sonelgaz/tmp
+2025-08-24 11:28:24,451 - INFO - 1-get_arpege:53 - Remote FTP directory: /share/meteofrance/Arpege_Orig
+2025-08-24 11:28:24,451 - INFO - 1-get_arpege:56 - Ensured temporary directory exists: /home/aoumeur/BQRM_V01/sonelgaz/tmp
+2025-08-24 11:28:24,451 - INFO - 1-get_arpege:67 - Checking for ARPEGE files for date: 20250824 using generic pattern: W_fr-meteofrance,MODEL,ARPEGE+01+SP1+*H*H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:24,451 - INFO - 1-get_arpege:71 - A complete ARPEGE dataset for 20250824 is expected to have 9 files.
+2025-08-24 11:28:24,451 - INFO - 1-get_arpege:75 - Listing remote files on FTP server...
+2025-08-24 11:28:24,451 - INFO - fetchdata:68 - Listing files in remote directory: /share/meteofrance/Arpege_Orig on ftp1.meteo.dz (pattern: W_fr-meteofrance,MODEL,ARPEGE+01+SP1+*H*H_C_LFPW_202508240000--.grib2)...
+2025-08-24 11:28:24,451 - INFO - fetchdata:17 - Attempting to connect to FTP server ftp1.meteo.dz:21...
+2025-08-24 11:28:24,700 - INFO - fetchdata:20 - Successfully connected and logged in to ftp1.meteo.dz.
+2025-08-24 11:28:24,709 - DEBUG - fetchdata:75 - Found 903 files in /share/meteofrance/Arpege_Orig before filtering.
+2025-08-24 11:28:24,710 - INFO - fetchdata:81 - Found 9 files matching pattern 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+*H*H_C_LFPW_202508240000--.grib2'.
+2025-08-24 11:28:24,711 - INFO - 1-get_arpege:93 - Found 9 potential ARPEGE files on FTP server:
+2025-08-24 11:28:24,711 - INFO - 1-get_arpege:95 -   - W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:24,711 - INFO - 1-get_arpege:95 -   - W_fr-meteofrance,MODEL,ARPEGE+01+SP1+13H24H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:24,711 - INFO - 1-get_arpege:95 -   - W_fr-meteofrance,MODEL,ARPEGE+01+SP1+25H36H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:24,711 - INFO - 1-get_arpege:95 -   - W_fr-meteofrance,MODEL,ARPEGE+01+SP1+37H48H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:24,711 - INFO - 1-get_arpege:95 -   - W_fr-meteofrance,MODEL,ARPEGE+01+SP1+49H60H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:24,711 - INFO - 1-get_arpege:95 -   - W_fr-meteofrance,MODEL,ARPEGE+01+SP1+61H72H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:24,711 - INFO - 1-get_arpege:95 -   - W_fr-meteofrance,MODEL,ARPEGE+01+SP1+73H84H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:24,711 - INFO - 1-get_arpege:95 -   - W_fr-meteofrance,MODEL,ARPEGE+01+SP1+85H96H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:24,711 - INFO - 1-get_arpege:95 -   - W_fr-meteofrance,MODEL,ARPEGE+01+SP1+97H102H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:24,711 - DEBUG - 1-get_arpege:99 - DEBUG: Expected ARPEGE files (9): ['W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+13H24H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+25H36H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+37H48H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+49H60H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+61H72H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+73H84H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+85H96H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+97H102H_C_LFPW_202508240000--.grib2']
+2025-08-24 11:28:24,711 - DEBUG - 1-get_arpege:100 - DEBUG: Found ARPEGE files (9): ['W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+13H24H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+25H36H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+37H48H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+49H60H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+61H72H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+73H84H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+85H96H_C_LFPW_202508240000--.grib2', 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+97H102H_C_LFPW_202508240000--.grib2']
+2025-08-24 11:28:24,711 - DEBUG - 1-get_arpege:106 - DEBUG: Missing ARPEGE files (0): []
+2025-08-24 11:28:24,712 - DEBUG - 1-get_arpege:107 - DEBUG: Extra ARPEGE files (0): []
+2025-08-24 11:28:24,712 - INFO - 1-get_arpege:111 - ARPEGE dataset for 20250824 is COMPLETE. All 9 expected files were found.
+2025-08-24 11:28:24,712 - INFO - 1-get_arpege:154 - Proceeding with FTP download using fetch_remote_files.
+2025-08-24 11:28:24,712 - INFO - 1-get_arpege:155 - Attempting to download 9 files to /home/aoumeur/BQRM_V01/sonelgaz/tmp.
+2025-08-24 11:28:24,712 - INFO - fetchdata:171 - Starting FTP file fetching process for 9 files.
+2025-08-24 11:28:24,712 - INFO - fetchdata:17 - Attempting to connect to FTP server ftp1.meteo.dz:21...
+2025-08-24 11:28:24,924 - INFO - fetchdata:20 - Successfully connected and logged in to ftp1.meteo.dz.
+2025-08-24 11:28:24,925 - INFO - fetchdata:227 - Local file W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2 is missing. Downloading.
+2025-08-24 11:28:24,925 - INFO - fetchdata:230 - Downloading /share/meteofrance/Arpege_Orig/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2 to /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:30,919 - INFO - fetchdata:239 - Successfully downloaded W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:30,919 - INFO - fetchdata:227 - Local file W_fr-meteofrance,MODEL,ARPEGE+01+SP1+85H96H_C_LFPW_202508240000--.grib2 is missing. Downloading.
+2025-08-24 11:28:30,919 - INFO - fetchdata:230 - Downloading /share/meteofrance/Arpege_Orig/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+85H96H_C_LFPW_202508240000--.grib2 to /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+85H96H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:37,135 - INFO - fetchdata:239 - Successfully downloaded W_fr-meteofrance,MODEL,ARPEGE+01+SP1+85H96H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:37,135 - INFO - fetchdata:227 - Local file W_fr-meteofrance,MODEL,ARPEGE+01+SP1+73H84H_C_LFPW_202508240000--.grib2 is missing. Downloading.
+2025-08-24 11:28:37,136 - INFO - fetchdata:230 - Downloading /share/meteofrance/Arpege_Orig/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+73H84H_C_LFPW_202508240000--.grib2 to /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+73H84H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:43,260 - INFO - fetchdata:239 - Successfully downloaded W_fr-meteofrance,MODEL,ARPEGE+01+SP1+73H84H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:43,260 - INFO - fetchdata:227 - Local file W_fr-meteofrance,MODEL,ARPEGE+01+SP1+49H60H_C_LFPW_202508240000--.grib2 is missing. Downloading.
+2025-08-24 11:28:43,260 - INFO - fetchdata:230 - Downloading /share/meteofrance/Arpege_Orig/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+49H60H_C_LFPW_202508240000--.grib2 to /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+49H60H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:49,333 - INFO - fetchdata:239 - Successfully downloaded W_fr-meteofrance,MODEL,ARPEGE+01+SP1+49H60H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:49,333 - INFO - fetchdata:227 - Local file W_fr-meteofrance,MODEL,ARPEGE+01+SP1+13H24H_C_LFPW_202508240000--.grib2 is missing. Downloading.
+2025-08-24 11:28:49,334 - INFO - fetchdata:230 - Downloading /share/meteofrance/Arpege_Orig/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+13H24H_C_LFPW_202508240000--.grib2 to /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+13H24H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:55,592 - INFO - fetchdata:239 - Successfully downloaded W_fr-meteofrance,MODEL,ARPEGE+01+SP1+13H24H_C_LFPW_202508240000--.grib2
+2025-08-24 11:28:55,592 - INFO - fetchdata:227 - Local file W_fr-meteofrance,MODEL,ARPEGE+01+SP1+61H72H_C_LFPW_202508240000--.grib2 is missing. Downloading.
+2025-08-24 11:28:55,593 - INFO - fetchdata:230 - Downloading /share/meteofrance/Arpege_Orig/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+61H72H_C_LFPW_202508240000--.grib2 to /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+61H72H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:01,626 - INFO - fetchdata:239 - Successfully downloaded W_fr-meteofrance,MODEL,ARPEGE+01+SP1+61H72H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:01,627 - INFO - fetchdata:227 - Local file W_fr-meteofrance,MODEL,ARPEGE+01+SP1+97H102H_C_LFPW_202508240000--.grib2 is missing. Downloading.
+2025-08-24 11:29:01,627 - INFO - fetchdata:230 - Downloading /share/meteofrance/Arpege_Orig/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+97H102H_C_LFPW_202508240000--.grib2 to /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+97H102H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:09,537 - INFO - fetchdata:239 - Successfully downloaded W_fr-meteofrance,MODEL,ARPEGE+01+SP1+97H102H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:09,538 - INFO - fetchdata:227 - Local file W_fr-meteofrance,MODEL,ARPEGE+01+SP1+25H36H_C_LFPW_202508240000--.grib2 is missing. Downloading.
+2025-08-24 11:29:09,538 - INFO - fetchdata:230 - Downloading /share/meteofrance/Arpege_Orig/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+25H36H_C_LFPW_202508240000--.grib2 to /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+25H36H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:10,384 - INFO - fetchdata:239 - Successfully downloaded W_fr-meteofrance,MODEL,ARPEGE+01+SP1+25H36H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:10,384 - INFO - fetchdata:227 - Local file W_fr-meteofrance,MODEL,ARPEGE+01+SP1+37H48H_C_LFPW_202508240000--.grib2 is missing. Downloading.
+2025-08-24 11:29:10,385 - INFO - fetchdata:230 - Downloading /share/meteofrance/Arpege_Orig/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+37H48H_C_LFPW_202508240000--.grib2 to /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+37H48H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:11,171 - INFO - fetchdata:239 - Successfully downloaded W_fr-meteofrance,MODEL,ARPEGE+01+SP1+37H48H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:11,172 - INFO - fetchdata:257 - FTP client closed.
+2025-08-24 11:29:11,172 - INFO - fetchdata:261 - FTP file fetching process completed.
+2025-08-24 11:29:11,172 - INFO - 1-get_arpege:166 - FTP transfer process initiated by fetch_remote_files completed.
+2025-08-24 11:29:11,172 - INFO - 1-get_arpege:173 - Verified: W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2 exists and is not empty.
+2025-08-24 11:29:11,172 - INFO - 1-get_arpege:173 - Verified: W_fr-meteofrance,MODEL,ARPEGE+01+SP1+85H96H_C_LFPW_202508240000--.grib2 exists and is not empty.
+2025-08-24 11:29:11,172 - INFO - 1-get_arpege:173 - Verified: W_fr-meteofrance,MODEL,ARPEGE+01+SP1+73H84H_C_LFPW_202508240000--.grib2 exists and is not empty.
+2025-08-24 11:29:11,172 - INFO - 1-get_arpege:173 - Verified: W_fr-meteofrance,MODEL,ARPEGE+01+SP1+49H60H_C_LFPW_202508240000--.grib2 exists and is not empty.
+2025-08-24 11:29:11,172 - INFO - 1-get_arpege:173 - Verified: W_fr-meteofrance,MODEL,ARPEGE+01+SP1+13H24H_C_LFPW_202508240000--.grib2 exists and is not empty.
+2025-08-24 11:29:11,172 - INFO - 1-get_arpege:173 - Verified: W_fr-meteofrance,MODEL,ARPEGE+01+SP1+61H72H_C_LFPW_202508240000--.grib2 exists and is not empty.
+2025-08-24 11:29:11,172 - INFO - 1-get_arpege:173 - Verified: W_fr-meteofrance,MODEL,ARPEGE+01+SP1+97H102H_C_LFPW_202508240000--.grib2 exists and is not empty.
+2025-08-24 11:29:11,172 - INFO - 1-get_arpege:173 - Verified: W_fr-meteofrance,MODEL,ARPEGE+01+SP1+25H36H_C_LFPW_202508240000--.grib2 exists and is not empty.
+2025-08-24 11:29:11,172 - INFO - 1-get_arpege:173 - Verified: W_fr-meteofrance,MODEL,ARPEGE+01+SP1+37H48H_C_LFPW_202508240000--.grib2 exists and is not empty.
+2025-08-24 11:29:11,173 - INFO - 1-get_arpege:185 - Successfully verified all 9 files downloaded to '/home/aoumeur/BQRM_V01/sonelgaz/tmp'.
+2025-08-24 11:29:11,173 - INFO - 1-get_arpege:188 - Attempting to run next program: 2-conv.py
+2025-08-24 11:29:11,173 - INFO - system_utils:36 - Executing command: /usr/bin/python3 /home/aoumeur/BQRM_V01/sonelgaz/scr/2-conv.py /home/aoumeur/BQRM_V01/sonelgaz/logs/sonelgaz_20250824_112824.log in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:11,908 - INFO - 2-conv:40 - --- Script '2-conv.py' started ---
+2025-08-24 11:29:11,908 - INFO - 2-conv:41 - Using shared log file: /home/aoumeur/BQRM_V01/sonelgaz/logs/sonelgaz_20250824_112824.log
+2025-08-24 11:29:11,908 - INFO - 2-conv:42 - Current working directory: /home/aoumeur/BQRM_V01/sonelgaz/scr
+2025-08-24 11:29:11,908 - INFO - 2-conv:43 - Script directory: /home/aoumeur/BQRM_V01/sonelgaz/scr
+2025-08-24 11:29:11,908 - INFO - 2-conv:44 - Parent directory dynamically set to: /home/aoumeur/BQRM_V01/sonelgaz
+2025-08-24 11:29:11,908 - INFO - 2-conv:45 - Temporary directory for GRIB files: /home/aoumeur/BQRM_V01/sonelgaz/tmp
+2025-08-24 11:29:11,908 - INFO - 2-conv:55 - Processing for date: 20250824
+2025-08-24 11:29:11,908 - INFO - 2-conv:56 - Starting extraction of temperature from ARPEGE files.
+2025-08-24 11:29:11,908 - INFO - 2-conv:65 - Found primary ARPEGE file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2. Processing this branch.
+2025-08-24 11:29:11,908 - INFO - grib_processor:41 - Starting GRIB parameter extraction and merging for filter: 'shortName=2t'
+2025-08-24 11:29:11,908 - INFO - grib_processor:54 - Extracting 'shortName=2t' from 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2' to 't2m00-12.grib'.
+2025-08-24 11:29:11,908 - INFO - system_utils:36 - Executing command: grib_copy -w shortName=2t /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2 /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m00-12.grib in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:12,397 - INFO - system_utils:47 - Command 'grib_copy' completed successfully.
+2025-08-24 11:29:12,397 - INFO - grib_processor:54 - Extracting 'shortName=2t' from 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+13H24H_C_LFPW_202508240000--.grib2' to 't2m12-24.grib'.
+2025-08-24 11:29:12,397 - INFO - system_utils:36 - Executing command: grib_copy -w shortName=2t /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+13H24H_C_LFPW_202508240000--.grib2 /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m12-24.grib in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:12,876 - INFO - system_utils:47 - Command 'grib_copy' completed successfully.
+2025-08-24 11:29:12,876 - INFO - grib_processor:54 - Extracting 'shortName=2t' from 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+25H36H_C_LFPW_202508240000--.grib2' to 't2m24-36.grib'.
+2025-08-24 11:29:12,877 - INFO - system_utils:36 - Executing command: grib_copy -w shortName=2t /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+25H36H_C_LFPW_202508240000--.grib2 /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m24-36.grib in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:13,360 - INFO - system_utils:47 - Command 'grib_copy' completed successfully.
+2025-08-24 11:29:13,361 - INFO - grib_processor:54 - Extracting 'shortName=2t' from 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+37H48H_C_LFPW_202508240000--.grib2' to 't2m36-48.grib'.
+2025-08-24 11:29:13,361 - INFO - system_utils:36 - Executing command: grib_copy -w shortName=2t /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+37H48H_C_LFPW_202508240000--.grib2 /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m36-48.grib in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:13,846 - INFO - system_utils:47 - Command 'grib_copy' completed successfully.
+2025-08-24 11:29:13,846 - INFO - grib_processor:69 - Merging 4 extracted GRIB files into '/home/aoumeur/BQRM_V01/sonelgaz/tmp/2t_20250824.grib'.
+2025-08-24 11:29:13,846 - INFO - file_operations:127 - Starting merge of 4 files into '/home/aoumeur/BQRM_V01/sonelgaz/tmp/2t_20250824.grib'.
+2025-08-24 11:29:13,859 - INFO - file_operations:139 - Successfully merged files into '/home/aoumeur/BQRM_V01/sonelgaz/tmp/2t_20250824.grib'.
+2025-08-24 11:29:13,859 - INFO - grib_processor:72 - Successfully merged all extracted files to: /home/aoumeur/BQRM_V01/sonelgaz/tmp/2t_20250824.grib
+2025-08-24 11:29:13,859 - INFO - grib_processor:79 - Deleting temporary extracted GRIB files.
+2025-08-24 11:29:13,860 - INFO - file_operations:168 - Successfully deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m00-12.grib
+2025-08-24 11:29:13,861 - INFO - file_operations:168 - Successfully deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m12-24.grib
+2025-08-24 11:29:13,861 - INFO - file_operations:168 - Successfully deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m24-36.grib
+2025-08-24 11:29:13,862 - INFO - file_operations:168 - Successfully deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m36-48.grib
+2025-08-24 11:29:13,862 - INFO - grib_processor:81 - Temporary GRIB files deleted.
+2025-08-24 11:29:13,862 - INFO - grib_processor:85 - GRIB processing completed successfully.
+2025-08-24 11:29:13,862 - INFO - 2-conv:90 - ARPEGE GRIB processing completed successfully. Final file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/2t_20250824.grib
+2025-08-24 11:29:13,862 - INFO - 2-conv:127 - Attempting to run next program: 3-create_forecast_table.py
+2025-08-24 11:29:13,862 - INFO - system_utils:36 - Executing command: /usr/bin/python3 /home/aoumeur/BQRM_V01/sonelgaz/scr/3-create_forecast_table.py /home/aoumeur/BQRM_V01/sonelgaz/logs/sonelgaz_20250824_112824.log in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:14,673 - INFO - 3-create_forecast_table:44 - --- Script '3-create_forecast_table.py' execution started. ---
+2025-08-24 11:29:14,673 - INFO - 3-create_forecast_table:45 - Logger configured. Logs will be saved to: /home/aoumeur/BQRM_V01/sonelgaz/logs/sonelgaz_20250824_112824.log
+2025-08-24 11:29:14,673 - INFO - 3-create_forecast_table:46 - Current script directory: /home/aoumeur/BQRM_V01/sonelgaz/scr
+2025-08-24 11:29:14,674 - INFO - 3-create_forecast_table:47 - Determined project root directory: /home/aoumeur/BQRM_V01/sonelgaz
+2025-08-24 11:29:14,674 - INFO - 3-create_forecast_table:48 - Current working directory (before change): /home/aoumeur/BQRM_V01/sonelgaz/scr
+2025-08-24 11:29:14,674 - INFO - 3-create_forecast_table:53 - Changed current working directory to: /home/aoumeur/BQRM_V01/sonelgaz
+2025-08-24 11:29:14,674 - INFO - date_time_utils:56 - Processed dates - Today: 2025-08-24, Yesterday: 2025-08-23
+2025-08-24 11:29:14,675 - INFO - 3-create_forecast_table:76 - Attempting to load station data from: /home/aoumeur/BQRM_V01/sonelgaz/template/station_onm_officielle.csv
+2025-08-24 11:29:14,677 - INFO - data_utils:71 - Successfully loaded 75 rows from /home/aoumeur/BQRM_V01/sonelgaz/template/station_onm_officielle.csv
+2025-08-24 11:29:14,687 - INFO - 3-create_forecast_table:82 - Successfully loaded 75 stations.
+2025-08-24 11:29:14,695 - INFO - 3-create_forecast_table:95 - Attempting to open GRIB file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/2t_20250824.grib
+2025-08-24 11:29:14,920 - INFO - grib_processor:113 - GRIB file '2t_20250824.grib' opened successfully.
+2025-08-24 11:29:14,920 - INFO - 3-create_forecast_table:98 - GRIB file resource successfully opened.
+2025-08-24 11:29:14,921 - INFO - 3-create_forecast_table:115 - Starting GRIB data extraction for 2m temperature.
+2025-08-24 11:29:14,921 - INFO - grib_processor:159 - Starting extraction of field '2t' for 75 stations across 25 time steps using old script's explicit loop logic.
+2025-08-24 11:29:18,338 - INFO - grib_processor:205 - Finished GRIB data extraction for all specified time steps and stations.
+2025-08-24 11:29:18,338 - INFO - 3-create_forecast_table:127 - Finished extraction of 2m temperature data from GRIB file and populated 't2m_XX' columns.
+2025-08-24 11:29:18,383 - INFO - 3-create_forecast_table:144 - GRIB file resource closed successfully.
+2025-08-24 11:29:18,383 - INFO - 3-create_forecast_table:150 - Calculating min and max temperatures across all time steps for each station.
+2025-08-24 11:29:18,383 - INFO - numpy_utils:26 - Starting calculation of min/max values across time steps for each entity.
+2025-08-24 11:29:18,384 - INFO - numpy_utils:49 - Min/Max temperatures calculated successfully.
+2025-08-24 11:29:18,384 - INFO - 3-create_forecast_table:155 - Min/Max temperatures calculated successfully.
+2025-08-24 11:29:18,384 - INFO - 3-create_forecast_table:163 - Converting results dictionary to pandas DataFrame.
+2025-08-24 11:29:18,386 - INFO - 3-create_forecast_table:167 - DataFrame created successfully.
+2025-08-24 11:29:18,409 - INFO - 3-create_forecast_table:180 - Attempting to save final table to: /home/aoumeur/BQRM_V01/sonelgaz/outputs/arpege/station_arpege_20250824.csv
+2025-08-24 11:29:18,415 - INFO - data_utils:145 - DataFrame successfully saved to /home/aoumeur/BQRM_V01/sonelgaz/outputs/arpege/station_arpege_20250824.csv
+2025-08-24 11:29:18,415 - INFO - 3-create_forecast_table:185 - Final table successfully saved to: /home/aoumeur/BQRM_V01/sonelgaz/outputs/arpege/station_arpege_20250824.csv
+2025-08-24 11:29:18,415 - INFO - 3-create_forecast_table:192 - Attempting to run next program: 4-traitement_obs.py
+2025-08-24 11:29:18,415 - INFO - system_utils:36 - Executing command: /usr/bin/python3 /home/aoumeur/BQRM_V01/sonelgaz/scr/4-traitement_obs.py /home/aoumeur/BQRM_V01/sonelgaz/logs/sonelgaz_20250824_112824.log in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:19,222 - INFO - 4-traitement_obs:50 - Script directory: /home/aoumeur/BQRM_V01/sonelgaz/scr
+2025-08-24 11:29:19,222 - INFO - 4-traitement_obs:54 - BUFR base directory: /home/aoumeur/BQRM_V01/sonelgaz/scr/../../bufr_data/observations
+2025-08-24 11:29:19,223 - INFO - 4-traitement_obs:60 - Output directory: /home/aoumeur/BQRM_V01/sonelgaz/scr/../outputs/observations
+2025-08-24 11:29:19,223 - INFO - date_time_utils:56 - Processed dates - Today: 2025-08-24, Yesterday: 2025-08-23
+2025-08-24 11:29:19,223 - INFO - 4-traitement_obs:104 - Initialized DataFrame with 47 unique stations.
+2025-08-24 11:29:19,223 - INFO - 4-traitement_obs:132 - Configured to process 5 time steps for observations.
+2025-08-24 11:29:19,224 - INFO - grib_processor:235 - Processing BUFR file: /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/23/Synop_202508230600.bufr for key 'airTemperature'
+2025-08-24 11:29:19,364 - INFO - 4-traitement_obs:160 - Merged data for t2m_06 into the main DataFrame.
+2025-08-24 11:29:19,364 - INFO - grib_processor:235 - Processing BUFR file: /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/23/Synop_202508231200.bufr for key 'airTemperature'
+2025-08-24 11:29:19,465 - INFO - 4-traitement_obs:160 - Merged data for t2m_12 into the main DataFrame.
+2025-08-24 11:29:19,466 - INFO - grib_processor:235 - Processing BUFR file: /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/23/Synop_202508231800.bufr for key 'airTemperature'
+2025-08-24 11:29:19,568 - INFO - 4-traitement_obs:160 - Merged data for t2m_18 into the main DataFrame.
+2025-08-24 11:29:19,568 - INFO - grib_processor:235 - Processing BUFR file: /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/23/Synop_202508232100.bufr for key 'airTemperature'
+2025-08-24 11:29:19,597 - INFO - 4-traitement_obs:160 - Merged data for t2m_21 into the main DataFrame.
+2025-08-24 11:29:19,597 - INFO - grib_processor:235 - Processing BUFR file: /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/24/Synop_202508240000.bufr for key 'airTemperature'
+2025-08-24 11:29:19,660 - INFO - 4-traitement_obs:160 - Merged data for t2m_24 into the main DataFrame.
+2025-08-24 11:29:19,660 - WARNING - data_utils:48 - The following desired columns were not found in the DataFrame: ['t2m_00', 't2m_03', 't2m_09', 't2m_15']. Only existing columns will be selected.
+2025-08-24 11:29:19,660 - INFO - data_utils:49 - Selecting columns: ['stationOrSiteName', 't2m_06', 't2m_12', 't2m_18', 't2m_21', 't2m_24']
+2025-08-24 11:29:19,661 - INFO - 4-traitement_obs:178 - Final DataFrame head:
+2025-08-24 11:29:19,664 - INFO - 4-traitement_obs:180 -   stationOrSiteName  t2m_06  t2m_12  t2m_18  t2m_21  t2m_24
+0             ADRAR    29.1    44.0    43.2     NaN    33.3
+1            ANNABA    22.0    29.0    26.1     NaN    19.7
+2      B-B-ARRERIDJ    17.7    32.1    29.3     NaN     NaN
+3             BATNA    18.5    35.1    29.0     NaN    20.5
+4            BECHAR    30.1    38.0    35.2     NaN    31.7
+2025-08-24 11:29:19,666 - INFO - 4-traitement_obs:192 - DataFrame successfully saved to: /home/aoumeur/BQRM_V01/sonelgaz/scr/../outputs/observations/observations_20250824.csv
+2025-08-24 11:29:19,666 - INFO - 4-traitement_obs:198 - Attempting to run next program: 5-traitement_obs_min_max.py
+2025-08-24 11:29:19,666 - INFO - system_utils:36 - Executing command: /usr/bin/python3 /home/aoumeur/BQRM_V01/sonelgaz/scr/5-traitement_obs_min_max.py /home/aoumeur/BQRM_V01/sonelgaz/logs/sonelgaz_20250824_112824.log in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:20,472 - INFO - 5-traitement_obs_min_max:50 - --- Script Start ---
+2025-08-24 11:29:20,472 - INFO - 5-traitement_obs_min_max:51 - Project Root: /home/aoumeur/BQRM_V01/sonelgaz
+2025-08-24 11:29:20,472 - INFO - 5-traitement_obs_min_max:52 - Script's Own Directory: /home/aoumeur/BQRM_V01/sonelgaz/scr
+2025-08-24 11:29:20,472 - INFO - date_time_utils:56 - Processed dates - Today: 2025-08-24, Yesterday: 2025-08-23
+2025-08-24 11:29:20,472 - INFO - 5-traitement_obs_min_max:80 - Defined 4 regions with a total of 47 stations.
+2025-08-24 11:29:20,472 - INFO - 5-traitement_obs_min_max:83 - Unique stations identified: 47
+2025-08-24 11:29:20,473 - INFO - 5-traitement_obs_min_max:87 - Initial DataFrame created with all station names.
+2025-08-24 11:29:20,473 - INFO - 5-traitement_obs_min_max:95 - Expected BUFR file for Tmin (today's 0600Z): /home/aoumeur/BQRM_V01/sonelgaz/../bufr_data/observations/2025/08/24/Synop_202508240600.bufr
+2025-08-24 11:29:20,473 - INFO - 5-traitement_obs_min_max:96 - Expected BUFR file for Tmax (yesterday's 1800Z): /home/aoumeur/BQRM_V01/sonelgaz/../bufr_data/observations/2025/08/23/Synop_202508231800.bufr
+2025-08-24 11:29:20,473 - INFO - 5-traitement_obs_min_max:106 - Proceeding with available BUFR files.
+2025-08-24 11:29:20,473 - INFO - grib_processor:235 - Processing BUFR file: /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/24/Synop_202508240600.bufr for key 'minimumTemperatureAtHeightAndOverPeriodSpecified'
+2025-08-24 11:29:20,616 - INFO - 5-traitement_obs_min_max:118 - Successfully merged Tmin data. Stations with Tmin: 87
+2025-08-24 11:29:20,617 - INFO - grib_processor:235 - Processing BUFR file: /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/23/Synop_202508231800.bufr for key 'maximumTemperatureAtHeightAndOverPeriodSpecified'
+2025-08-24 11:29:20,718 - INFO - 5-traitement_obs_min_max:133 - Successfully merged Tmax data. Stations with Tmax: 88
+2025-08-24 11:29:20,718 - INFO - 5-traitement_obs_min_max:140 - Starting DataFrame cleaning and filtering.
+2025-08-24 11:29:20,719 - INFO - data_utils:49 - Selecting columns: ['stationOrSiteName', 'tmin', 'tmax']
+2025-08-24 11:29:20,722 - INFO - 5-traitement_obs_min_max:167 - Final cleaned DataFrame has 47 rows.
+2025-08-24 11:29:20,724 - INFO - 5-traitement_obs_min_max:177 - Output directory ensured: /home/aoumeur/BQRM_V01/sonelgaz/outputs/observations
+2025-08-24 11:29:20,725 - INFO - 5-traitement_obs_min_max:187 - Data successfully saved to /home/aoumeur/BQRM_V01/sonelgaz/outputs/observations/tmin_tmax_20250824.csv
+2025-08-24 11:29:20,725 - INFO - 5-traitement_obs_min_max:194 - Attempting to run next program: 6-create_tables.py
+2025-08-24 11:29:20,726 - INFO - system_utils:36 - Executing command: /usr/bin/python3 /home/aoumeur/BQRM_V01/sonelgaz/scr/6-create_tables.py /home/aoumeur/BQRM_V01/sonelgaz/logs/sonelgaz_20250824_112824.log in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:21,224 - INFO - date_time_utils:56 - Processed dates - Today: 2025-08-24, Yesterday: 2025-08-23
+2025-08-24 11:29:21,224 - INFO - 6-create_tables:68 - Attempting to load data from outputs directory: /home/aoumeur/BQRM_V01/sonelgaz/outputs
+2025-08-24 11:29:21,227 - INFO - data_utils:71 - Successfully loaded 75 rows from /home/aoumeur/BQRM_V01/sonelgaz/outputs/arpege/station_arpege_20250824.csv
+2025-08-24 11:29:21,253 - INFO - 6-create_tables:82 - Processing arpege data for 't_demain_arp'.
+2025-08-24 11:29:21,254 - INFO - 6-create_tables:97 - Arpege data processed successfully.
+2025-08-24 11:29:21,254 - INFO - 6-create_tables:111 - Loading and processing observations data.
+2025-08-24 11:29:21,255 - INFO - data_utils:71 - Successfully loaded 47 rows from /home/aoumeur/BQRM_V01/sonelgaz/outputs/observations/observations_20250824.csv
+2025-08-24 11:29:21,263 - INFO - 6-create_tables:128 - Observations data loaded and processed from: /home/aoumeur/BQRM_V01/sonelgaz/outputs/observations/observations_20250824.csv
+2025-08-24 11:29:21,263 - INFO - 6-create_tables:138 - Loading and processing observations min/max data.
+2025-08-24 11:29:21,264 - INFO - data_utils:71 - Successfully loaded 47 rows from /home/aoumeur/BQRM_V01/sonelgaz/outputs/observations/tmin_tmax_20250824.csv
+2025-08-24 11:29:21,269 - INFO - 6-create_tables:152 - Observations min/max data loaded and processed from: /home/aoumeur/BQRM_V01/sonelgaz/outputs/observations/tmin_tmax_20250824.csv
+2025-08-24 11:29:21,270 - INFO - 6-create_tables:161 - Merging all processed dataframes into 'full_table'.
+2025-08-24 11:29:21,273 - INFO - 6-create_tables:167 - Dataframes merged successfully.
+2025-08-24 11:29:21,273 - INFO - 6-create_tables:173 - Reindexing columns and filling missing values in 'full_table'.
+2025-08-24 11:29:21,275 - INFO - 6-create_tables:182 - Columns reindexed and missing values filled.
+2025-08-24 11:29:21,275 - INFO - 6-create_tables:205 - Starting processing and saving Excel files for each region.
+2025-08-24 11:29:21,275 - INFO - 6-create_tables:208 - Processing region: Ouest
+2025-08-24 11:29:21,287 - INFO - data_utils:230 - DataFrame successfully saved to Excel file: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Ouest.xlsx (Sheet: Ouest)
+2025-08-24 11:29:21,287 - INFO - 6-create_tables:235 - Successfully saved Excel file for region 'Ouest' to /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Ouest.xlsx
+2025-08-24 11:29:21,287 - INFO - 6-create_tables:208 - Processing region: Centre
+2025-08-24 11:29:21,298 - INFO - data_utils:230 - DataFrame successfully saved to Excel file: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Centre.xlsx (Sheet: Centre)
+2025-08-24 11:29:21,298 - INFO - 6-create_tables:235 - Successfully saved Excel file for region 'Centre' to /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Centre.xlsx
+2025-08-24 11:29:21,298 - INFO - 6-create_tables:208 - Processing region: Est
+2025-08-24 11:29:21,309 - INFO - data_utils:230 - DataFrame successfully saved to Excel file: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Est.xlsx (Sheet: Est)
+2025-08-24 11:29:21,309 - INFO - 6-create_tables:235 - Successfully saved Excel file for region 'Est' to /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Est.xlsx
+2025-08-24 11:29:21,309 - INFO - 6-create_tables:208 - Processing region: Sud
+2025-08-24 11:29:21,320 - INFO - data_utils:230 - DataFrame successfully saved to Excel file: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Sud.xlsx (Sheet: Sud)
+2025-08-24 11:29:21,320 - INFO - 6-create_tables:235 - Successfully saved Excel file for region 'Sud' to /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Sud.xlsx
+2025-08-24 11:29:21,320 - INFO - 6-create_tables:242 - All regional Excel files processed and created successfully.
+2025-08-24 11:29:21,320 - INFO - 6-create_tables:246 - Attempting to run next program: 7-create_word.py
+2025-08-24 11:29:21,320 - INFO - system_utils:36 - Executing command: /usr/bin/python3 /home/aoumeur/BQRM_V01/sonelgaz/scr/7-create_word.py /home/aoumeur/BQRM_V01/sonelgaz/logs/sonelgaz_20250824_112824.log in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:21,856 - INFO - 7-create_word:50 - --- Script '7-create_word.py' execution started. ---
+2025-08-24 11:29:21,856 - INFO - 7-create_word:51 - Logger configured. Logs will be saved to: /home/aoumeur/BQRM_V01/sonelgaz/logs/sonelgaz_20250824_112824.log
+2025-08-24 11:29:21,856 - INFO - 7-create_word:52 - Current script directory: /home/aoumeur/BQRM_V01/sonelgaz/scr
+2025-08-24 11:29:21,856 - INFO - 7-create_word:53 - Determined project root directory: /home/aoumeur/BQRM_V01/sonelgaz
+2025-08-24 11:29:21,856 - INFO - 7-create_word:54 - Current working directory (before change): /home/aoumeur/BQRM_V01/sonelgaz/scr
+2025-08-24 11:29:21,857 - INFO - 7-create_word:58 - Changed current working directory to: /home/aoumeur/BQRM_V01/sonelgaz
+2025-08-24 11:29:21,857 - INFO - 7-create_word:73 - Processed dates - Today: 24-08-2025, Tomorrow: 25-08-2025
+2025-08-24 11:29:21,857 - INFO - 7-create_word:199 - Defining file paths for Excel, Word template, and output.
+2025-08-24 11:29:21,857 - INFO - 7-create_word:207 - Excel Ouest path: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Ouest.xlsx
+2025-08-24 11:29:21,857 - INFO - 7-create_word:208 - Excel Centre path: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Centre.xlsx
+2025-08-24 11:29:21,857 - INFO - 7-create_word:209 - Excel Est path: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Est.xlsx
+2025-08-24 11:29:21,857 - INFO - 7-create_word:210 - Excel Sud path: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Sud.xlsx
+2025-08-24 11:29:21,857 - INFO - 7-create_word:211 - Word template path: /home/aoumeur/BQRM_V01/sonelgaz/template/Bulletin.docx
+2025-08-24 11:29:21,857 - INFO - 7-create_word:212 - Output Word document path: /home/aoumeur/BQRM_V01/sonelgaz/bulletins/Bulletin_Sonelgaz_24-08-2025.docx
+2025-08-24 11:29:21,857 - INFO - 7-create_word:216 - Loading Excel workbooks using pytaps.data_utils.load_excel_workbook...
+2025-08-24 11:29:21,857 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Ouest.xlsx
+2025-08-24 11:29:21,864 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Ouest.xlsx, active sheet: 'Ouest'
+2025-08-24 11:29:21,864 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Centre.xlsx
+2025-08-24 11:29:21,870 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Centre.xlsx, active sheet: 'Centre'
+2025-08-24 11:29:21,870 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Est.xlsx
+2025-08-24 11:29:21,875 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Est.xlsx, active sheet: 'Est'
+2025-08-24 11:29:21,876 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Sud.xlsx
+2025-08-24 11:29:21,881 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/sonelgaz/outputs/tab_reg/regions_Sud.xlsx, active sheet: 'Sud'
+2025-08-24 11:29:21,882 - INFO - 7-create_word:222 - All Excel workbooks loaded successfully.
+2025-08-24 11:29:21,882 - INFO - 7-create_word:230 - Loading Word template...
+2025-08-24 11:29:21,936 - INFO - 7-create_word:234 - Successfully loaded Word template: /home/aoumeur/BQRM_V01/sonelgaz/template/Bulletin.docx
+2025-08-24 11:29:21,936 - INFO - 7-create_word:245 - Updating dates in the Word document using local modify_paragraph function.
+2025-08-24 11:29:21,937 - INFO - 7-create_word:96 - Found paragraph containing 'Bulletin du  DATE_TODAY' at index 7. Attempting to modify.
+2025-08-24 11:29:21,938 - INFO - 7-create_word:119 - Successfully modified paragraph from 'Bulletin du  DATE_TODAY' to 'Bulletin du 24-08-2025'.
+2025-08-24 11:29:21,938 - INFO - 7-create_word:96 - Found paragraph containing 'Prévision valable pour la journée du : DATE_DEMAIN' at index 9. Attempting to modify.
+2025-08-24 11:29:21,939 - INFO - 7-create_word:119 - Successfully modified paragraph from 'Prévision valable pour la journée du : DATE_DEMAIN' to 'Prévision valable pour la journée du : 25-08-2025'.
+2025-08-24 11:29:21,939 - INFO - 7-create_word:249 - Dates in Word document updated successfully.
+2025-08-24 11:29:21,939 - INFO - 7-create_word:256 - Updating all tables in the Word document with Excel data using local update_table function.
+2025-08-24 11:29:21,939 - INFO - 7-create_word:136 - Starting update for Word table: 'Ouest Region Table' from Excel worksheet: 'Ouest'.
+2025-08-24 11:29:22,566 - INFO - 7-create_word:174 - Applying formatting to table: 'Ouest Region Table'.
+2025-08-24 11:29:22,602 - INFO - 7-create_word:195 - Finished updating and formatting table: 'Ouest Region Table'.
+2025-08-24 11:29:22,602 - INFO - 7-create_word:136 - Starting update for Word table: 'Centre Region Table' from Excel worksheet: 'Centre'.
+2025-08-24 11:29:22,984 - INFO - 7-create_word:174 - Applying formatting to table: 'Centre Region Table'.
+2025-08-24 11:29:23,011 - INFO - 7-create_word:195 - Finished updating and formatting table: 'Centre Region Table'.
+2025-08-24 11:29:23,012 - INFO - 7-create_word:136 - Starting update for Word table: 'Est Region Table' from Excel worksheet: 'Est'.
+2025-08-24 11:29:23,732 - INFO - 7-create_word:174 - Applying formatting to table: 'Est Region Table'.
+2025-08-24 11:29:23,770 - INFO - 7-create_word:195 - Finished updating and formatting table: 'Est Region Table'.
+2025-08-24 11:29:23,770 - INFO - 7-create_word:136 - Starting update for Word table: 'Sud Region Table' from Excel worksheet: 'Sud'.
+2025-08-24 11:29:24,611 - INFO - 7-create_word:174 - Applying formatting to table: 'Sud Region Table'.
+2025-08-24 11:29:24,651 - INFO - 7-create_word:195 - Finished updating and formatting table: 'Sud Region Table'.
+2025-08-24 11:29:24,651 - INFO - 7-create_word:263 - All specified tables in Word document updated successfully.
+2025-08-24 11:29:24,651 - INFO - 7-create_word:274 - Attempting to save the updated Word document to: /home/aoumeur/BQRM_V01/sonelgaz/bulletins/Bulletin_Sonelgaz_24-08-2025.docx
+2025-08-24 11:29:24,932 - INFO - 7-create_word:279 - Word document successfully saved as /home/aoumeur/BQRM_V01/sonelgaz/bulletins/Bulletin_Sonelgaz_24-08-2025.docx
+2025-08-24 11:29:24,932 - INFO - 7-create_word:283 - CONFIRMATION: File 'Bulletin_Sonelgaz_24-08-2025.docx' exists on disk at '/home/aoumeur/BQRM_V01/sonelgaz/bulletins' (size: 2962609 bytes).
+2025-08-24 11:29:24,932 - INFO - 7-create_word:296 - Attempting to clean up temporary files in: /home/aoumeur/BQRM_V01/sonelgaz/tmp using pytap.file_operations.clean_directory.
+2025-08-24 11:29:24,932 - INFO - 7-create_word:299 - Temporary files cleanup complete.
+2025-08-24 11:29:24,932 - INFO - 7-create_word:306 - Attempting to run next program: 8-send_MSG.py
+2025-08-24 11:29:24,932 - INFO - system_utils:36 - Executing command: /usr/bin/python3 /home/aoumeur/BQRM_V01/sonelgaz/scr/8-send_MSG.py /home/aoumeur/BQRM_V01/sonelgaz/logs/sonelgaz_20250824_112824.log in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:24,994 - INFO - 8-send_MSG:62 - Logger initialized for 8-send_MSG. Log file: /home/aoumeur/BQRM_V01/sonelgaz/logs/sonelgaz_20250824_112824.log
+2025-08-24 11:29:24,994 - INFO - 8-send_MSG:63 - Starting Sonelgaz bulletin sending script.
+2025-08-24 11:29:24,994 - DEBUG - date_time_utils:34 - Calculating YMD for 'today' (offset: 0) and 'yesterday' (offset: 0).
+2025-08-24 11:29:24,994 - INFO - date_time_utils:56 - Processed dates - Today: 2025-08-24, Yesterday: 2025-08-23
+2025-08-24 11:29:24,994 - DEBUG - 8-send_MSG:69 - Today's date components: Year=2025, Month=08, Day=24
+2025-08-24 11:29:24,994 - DEBUG - 8-send_MSG:76 - Today's date components: Year=2025, Month=08, Day=24
+2025-08-24 11:29:24,994 - DEBUG - 8-send_MSG:79 - Base data path determined as: /home/aoumeur/BQRM_V01/sonelgaz/scr
+2025-08-24 11:29:24,995 - INFO - 8-send_MSG:85 - Expected bulletin file path: /home/aoumeur/BQRM_V01/sonelgaz/scr/../bulletins/Bulletin_Sonelgaz_24-08-2025.docx
+2025-08-24 11:29:24,995 - DEBUG - file_operations:245 - File found: /home/aoumeur/BQRM_V01/sonelgaz/scr/../tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:24,995 - WARNING - file_operations:243 - File not found: /home/aoumeur/BQRM_V01/sonelgaz/scr/../tmp/grib_2025082400_0000. Skipping this operation.
+2025-08-24 11:29:24,995 - INFO - 8-send_MSG:99 - ARPEGE GRIB file found. Setting email subject/body for ARPEGE model.
+2025-08-24 11:29:24,995 - DEBUG - file_operations:245 - File found: /home/aoumeur/BQRM_V01/sonelgaz/scr/../bulletins/Bulletin_Sonelgaz_24-08-2025.docx
+2025-08-24 11:29:24,995 - INFO - 8-send_MSG:110 - Attempting to send email with bulletin: /home/aoumeur/BQRM_V01/sonelgaz/scr/../bulletins/Bulletin_Sonelgaz_24-08-2025.docx
+2025-08-24 11:29:24,995 - INFO - email_utils:30 - Attempting to send email from 'pnt@meteo.dz' to ['aoumeurmohamed2404@gmail.com'] with subject: 'Bulletin Sonelgaz Du 24/08/2025 Généré avec ARPEGE'
+2025-08-24 11:29:24,995 - DEBUG - email_utils:31 - Attachments list received by send_email: [PosixPath('/home/aoumeur/BQRM_V01/sonelgaz/scr/../bulletins/Bulletin_Sonelgaz_24-08-2025.docx')]
+2025-08-24 11:29:27,180 - DEBUG - email_utils:37 - Successfully logged into SMTP server.
+2025-08-24 11:29:27,181 - DEBUG - email_utils:47 - Found 1 attachments to process.
+2025-08-24 11:29:27,181 - DEBUG - email_utils:50 - Processing attachment: '/home/aoumeur/BQRM_V01/sonelgaz/scr/../bulletins/Bulletin_Sonelgaz_24-08-2025.docx'
+2025-08-24 11:29:27,182 - DEBUG - email_utils:54 - Attachment file found at '/home/aoumeur/BQRM_V01/sonelgaz/scr/../bulletins/Bulletin_Sonelgaz_24-08-2025.docx'. Attempting to open and attach.
+2025-08-24 11:29:27,272 - DEBUG - email_utils:61 - Successfully attached file: 'Bulletin_Sonelgaz_24-08-2025.docx'
+2025-08-24 11:29:27,573 - INFO - email_utils:71 - Email successfully sent to 'aoumeurmohamed2404@gmail.com'.
+2025-08-24 11:29:27,575 - INFO - 8-send_MSG:123 - Bulletin email process completed successfully.
+2025-08-24 11:29:27,575 - INFO - 8-send_MSG:131 - Attempting to clean up temporary directory: /home/aoumeur/BQRM_V01/sonelgaz/scr/../tmp
+2025-08-24 11:29:27,576 - INFO - file_operations:284 - Starting cleanup of directory: /home/aoumeur/BQRM_V01/sonelgaz/tmp (Pattern: All files)
+2025-08-24 11:29:27,590 - DEBUG - file_operations:293 - Deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+49H60H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:27,609 - DEBUG - file_operations:293 - Deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+25H36H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:27,621 - DEBUG - file_operations:293 - Deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:27,635 - DEBUG - file_operations:293 - Deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+61H72H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:27,646 - DEBUG - file_operations:293 - Deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+73H84H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:27,660 - DEBUG - file_operations:293 - Deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+37H48H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:27,671 - DEBUG - file_operations:293 - Deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+13H24H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:27,683 - DEBUG - file_operations:293 - Deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+85H96H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:27,690 - DEBUG - file_operations:293 - Deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+97H102H_C_LFPW_202508240000--.grib2
+2025-08-24 11:29:27,692 - DEBUG - file_operations:293 - Deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/2t_20250824.grib
+2025-08-24 11:29:27,692 - INFO - file_operations:301 - Finished cleanup. Successfully deleted 10 files from /home/aoumeur/BQRM_V01/sonelgaz/tmp.
+2025-08-24 11:29:27,692 - INFO - 8-send_MSG:140 - Successfully cleaned 10 files from /home/aoumeur/BQRM_V01/sonelgaz/scr/../tmp.
+2025-08-24 11:29:27,692 - INFO - 8-send_MSG:147 - Script execution finished.
+2025-08-24 11:29:27,703 - INFO - system_utils:47 - Command '/usr/bin/python3' completed successfully.
+2025-08-24 11:29:27,703 - INFO - 7-create_word:313 - Successfully executed 8-send_MSG.py.
+2025-08-24 11:29:27,703 - INFO - 7-create_word:321 - --- Script '7-create_word.py' finished. ---
+2025-08-24 11:29:27,791 - INFO - system_utils:47 - Command '/usr/bin/python3' completed successfully.
+2025-08-24 11:29:27,791 - INFO - 6-create_tables:254 - Successfully executed 7-create_word.py.
+2025-08-24 11:29:27,791 - INFO - 6-create_tables:263 - --- Script '6-create_tables.py' finished. ---
+2025-08-24 11:29:27,864 - INFO - system_utils:47 - Command '/usr/bin/python3' completed successfully.
+2025-08-24 11:29:27,864 - INFO - 5-traitement_obs_min_max:202 - Successfully executed 6-create_tables.py.
+2025-08-24 11:29:27,864 - INFO - 5-traitement_obs_min_max:211 - --- Script '5-traitement_obs_min_max.py' finished. ---
+2025-08-24 11:29:27,984 - INFO - system_utils:47 - Command '/usr/bin/python3' completed successfully.
+2025-08-24 11:29:27,984 - INFO - 4-traitement_obs:206 - Successfully executed 5-traitement_obs_min_max.py.
+2025-08-24 11:29:27,984 - INFO - 4-traitement_obs:215 - --- Script '4-traitement_obs.py' finished. ---
+2025-08-24 11:29:28,104 - INFO - system_utils:47 - Command '/usr/bin/python3' completed successfully.
+2025-08-24 11:29:28,104 - INFO - 3-create_forecast_table:199 - Successfully executed 4-traitement_obs.py.
+2025-08-24 11:29:28,104 - INFO - 3-create_forecast_table:207 - --- Script '3-create_forecast_table.py' finished. ---
+2025-08-24 11:29:28,226 - INFO - system_utils:47 - Command '/usr/bin/python3' completed successfully.
+2025-08-24 11:29:28,226 - INFO - 2-conv:134 - Successfully executed 3-create_forecast_table.py.
+2025-08-24 11:29:28,226 - INFO - 2-conv:139 - --- Script '2-conv.py' finished. ---
+2025-08-24 11:29:28,330 - INFO - system_utils:47 - Command '/usr/bin/python3' completed successfully.
+2025-08-24 11:29:28,330 - DEBUG - system_utils:49 - STDOUT: 2025-08-24 11:29:11,908 - INFO - 2-conv:40 - --- Script '2-conv.py' started ---
+2025-08-24 11:29:11,908 - INFO - 2-conv:41 - Using shared log file: /home/aoumeur/BQRM_V01/sonelgaz/logs/sonelgaz_20250824_112824.log
+2025-08-24 11:29:11,908 - INFO - 2-conv:42 - Current working directory: /home/aoumeur/BQRM_V01/sonelgaz/scr
+2025-08-24 11:29:11,908 - INFO - 2-conv:43 - Script directory: /home/aoumeur/BQRM_V01/sonelgaz/scr
+2025-08-24 11:29:11,908 - INFO - 2-conv:44 - Parent directory dynamically set to: /home/aoumeur/BQRM_V01/sonelgaz
+2025-08-24 11:29:11,908 - INFO - 2-conv:45 - Temporary directory for GRIB files: /home/aoumeur/BQRM_V01/sonelgaz/tmp
+2025-08-24 11:29:11,908 - INFO - 2-conv:55 - Processing for date: 20250824
+2025-08-24 11:29:11,908 - INFO - 2-conv:56 - Starting extraction of temperature from ARPEGE files.
+2025-08-24 11:29:11,908 - INFO - 2-conv:65 - Found primary ARPEGE file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2. Processing this branch.
+2025-08-24 11:29:11,908 - INFO - grib_processor:41 - Starting GRIB parameter extraction and merging for filter: 'shortName=2t'
+2025-08-24 11:29:11,908 - INFO - grib_processor:54 - Extracting 'shortName=2t' from 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2' to 't2m00-12.grib'.
+2025-08-24 11:29:11,908 - INFO - system_utils:36 - Executing command: grib_copy -w shortName=2t /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+00H12H_C_LFPW_202508240000--.grib2 /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m00-12.grib in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:12,397 - INFO - system_utils:47 - Command 'grib_copy' completed successfully.
+2025-08-24 11:29:12,397 - INFO - grib_processor:54 - Extracting 'shortName=2t' from 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+13H24H_C_LFPW_202508240000--.grib2' to 't2m12-24.grib'.
+2025-08-24 11:29:12,397 - INFO - system_utils:36 - Executing command: grib_copy -w shortName=2t /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+13H24H_C_LFPW_202508240000--.grib2 /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m12-24.grib in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:12,876 - INFO - system_utils:47 - Command 'grib_copy' completed successfully.
+2025-08-24 11:29:12,876 - INFO - grib_processor:54 - Extracting 'shortName=2t' from 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+25H36H_C_LFPW_202508240000--.grib2' to 't2m24-36.grib'.
+2025-08-24 11:29:12,877 - INFO - system_utils:36 - Executing command: grib_copy -w shortName=2t /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+25H36H_C_LFPW_202508240000--.grib2 /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m24-36.grib in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:13,360 - INFO - system_utils:47 - Command 'grib_copy' completed successfully.
+2025-08-24 11:29:13,361 - INFO - grib_processor:54 - Extracting 'shortName=2t' from 'W_fr-meteofrance,MODEL,ARPEGE+01+SP1+37H48H_C_LFPW_202508240000--.grib2' to 't2m36-48.grib'.
+2025-08-24 11:29:13,361 - INFO - system_utils:36 - Executing command: grib_copy -w shortName=2t /home/aoumeur/BQRM_V01/sonelgaz/tmp/W_fr-meteofrance,MODEL,ARPEGE+01+SP1+37H48H_C_LFPW_202508240000--.grib2 /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m36-48.grib in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:13,846 - INFO - system_utils:47 - Command 'grib_copy' completed successfully.
+2025-08-24 11:29:13,846 - INFO - grib_processor:69 - Merging 4 extracted GRIB files into '/home/aoumeur/BQRM_V01/sonelgaz/tmp/2t_20250824.grib'.
+2025-08-24 11:29:13,846 - INFO - file_operations:127 - Starting merge of 4 files into '/home/aoumeur/BQRM_V01/sonelgaz/tmp/2t_20250824.grib'.
+2025-08-24 11:29:13,859 - INFO - file_operations:139 - Successfully merged files into '/home/aoumeur/BQRM_V01/sonelgaz/tmp/2t_20250824.grib'.
+2025-08-24 11:29:13,859 - INFO - grib_processor:72 - Successfully merged all extracted files to: /home/aoumeur/BQRM_V01/sonelgaz/tmp/2t_20250824.grib
+2025-08-24 11:29:13,859 - INFO - grib_processor:79 - Deleting temporary extracted GRIB files.
+2025-08-24 11:29:13,860 - INFO - file_operations:168 - Successfully deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m00-12.grib
+2025-08-24 11:29:13,861 - INFO - file_operations:168 - Successfully deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m12-24.grib
+2025-08-24 11:29:13,861 - INFO - file_operations:168 - Successfully deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m24-36.grib
+2025-08-24 11:29:13,862 - INFO - file_operations:168 - Successfully deleted file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/t2m36-48.grib
+2025-08-24 11:29:13,862 - INFO - grib_processor:81 - Temporary GRIB files deleted.
+2025-08-24 11:29:13,862 - INFO - grib_processor:85 - GRIB processing completed successfully.
+2025-08-24 11:29:13,862 - INFO - 2-conv:90 - ARPEGE GRIB processing completed successfully. Final file: /home/aoumeur/BQRM_V01/sonelgaz/tmp/2t_20250824.grib
+2025-08-24 11:29:13,862 - INFO - 2-conv:127 - Attempting to run next program: 3-create_forecast_table.py
+2025-08-24 11:29:13,862 - INFO - system_utils:36 - Executing command: /usr/bin/python3 /home/aoumeur/BQRM_V01/sonelgaz/scr/3-create_forecast_table.py /home/aoumeur/BQRM_V01/sonelgaz/logs/sonelgaz_20250824_112824.log in directory: '/home/aoumeur/BQRM_V01/sonelgaz/scr'
+2025-08-24 11:29:28,226 - INFO - system_utils:47 - Command '/usr/bin/python3' completed successfully.
+2025-08-24 11:29:28,226 - INFO - 2-conv:134 - Successfully executed 3-create_forecast_table.py.
+2025-08-24 11:29:28,226 - INFO - 2-conv:139 - --- Script '2-conv.py' finished. ---
+2025-08-24 11:29:28,330 - INFO - 1-get_arpege:195 - Successfully executed 2-conv.py.
+2025-08-24 11:29:28,330 - INFO - 1-get_arpege:204 - --- Script '1-get_arpege.py' finished. ---

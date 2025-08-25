@@ -1,0 +1,44 @@
+2025-08-24 11:34:36,110 - INFO - 1-get_arpege:47 - --- Script '1-get_arpege.py' started ---
+2025-08-24 11:34:36,110 - INFO - 1-get_arpege:48 - Logger configured. All logs for this workflow will be saved to: /home/aoumeur/BQRM_V01/sonelgaz/logs/sonelgaz_20250824_113435.log
+2025-08-24 11:34:36,110 - INFO - 1-get_arpege:49 - Current working directory: /home/aoumeur/BQRM_V01/sonelgaz/scr
+2025-08-24 11:34:36,110 - INFO - 1-get_arpege:50 - Script directory: /home/aoumeur/BQRM_V01/sonelgaz/scr
+2025-08-24 11:34:36,110 - INFO - 1-get_arpege:51 - Parent directory dynamically set to: /home/aoumeur/BQRM_V01/sonelgaz
+2025-08-24 11:34:36,110 - INFO - 1-get_arpege:52 - Temporary directory for FTP download: /home/aoumeur/BQRM_V01/sonelgaz/tmp
+2025-08-24 11:34:36,110 - INFO - 1-get_arpege:53 - Remote FTP directory: /share/meteofrance/Arpege_Orig
+2025-08-24 11:34:36,110 - INFO - 1-get_arpege:56 - Ensured temporary directory exists: /home/aoumeur/BQRM_V01/sonelgaz/tmp
+2025-08-24 11:34:36,111 - INFO - 1-get_arpege:67 - Checking for ARPEGE files for date: 20250824 using generic pattern: W_fr-meteofrance,MODEL,ARPEGE+01+SP1+*H*H_C_LFPW_202508240000--.grib2
+2025-08-24 11:34:36,111 - INFO - 1-get_arpege:71 - A complete ARPEGE dataset for 20250824 is expected to have 9 files.
+2025-08-24 11:34:36,111 - INFO - 1-get_arpege:75 - Listing remote files on FTP server...
+2025-08-24 11:34:36,111 - INFO - fetchdata:68 - Listing files in remote directory: /share/meteofrance/Arpege_Orig on ftp1.meteo.dz (pattern: W_fr-meteofrance,MODEL,ARPEGE+01+SP1+*H*H_C_LFPW_202508240000--.grib2)...
+2025-08-24 11:34:36,111 - INFO - fetchdata:17 - Attempting to connect to FTP server ftp1.meteo.dz:21...
+2025-08-24 11:34:56,131 - ERROR - fetchdata:23 - Failed to connect to FTP server ftp1.meteo.dz. Error: [Errno -3] Temporary failure in name resolution
+2025-08-24 11:34:56,131 - ERROR - fetchdata:87 - Failed to list files on FTP server ftp1.meteo.dz//share/meteofrance/Arpege_Orig. Error: Failed to connect to FTP server ftp1.meteo.dz. Error: [Errno -3] Temporary failure in name resolution
+2025-08-24 11:34:56,131 - ERROR - 1-get_arpege:201 - An unexpected error occurred in the main script flow: Failed to list files on FTP server ftp1.meteo.dz//share/meteofrance/Arpege_Orig. Error: Failed to connect to FTP server ftp1.meteo.dz. Error: [Errno -3] Temporary failure in name resolution
+Traceback (most recent call last):
+  File "/home/aoumeur/Téléchargements/PyTAP-main/src/pytaps/fetchdata.py", line 18, in create_ftp_client
+    ftp.connect(host, port, timeout=30) # Add a timeout
+  File "/usr/lib/python3.10/ftplib.py", line 158, in connect
+    self.sock = socket.create_connection((self.host, self.port), self.timeout,
+  File "/usr/lib/python3.10/socket.py", line 836, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.10/socket.py", line 967, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aoumeur/Téléchargements/PyTAP-main/src/pytaps/fetchdata.py", line 69, in list_remote_files
+    ftp = create_ftp_client(host=host, username=username, password=password)
+  File "/home/aoumeur/Téléchargements/PyTAP-main/src/pytaps/fetchdata.py", line 24, in create_ftp_client
+    raise ConnectionError(f"Failed to connect to FTP server {host}. Error: {e}")
+ConnectionError: Failed to connect to FTP server ftp1.meteo.dz. Error: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aoumeur/BQRM_V01/sonelgaz/scr/1-get_arpege.py", line 78, in <module>
+    matching_remote_files = list_remote_files(
+  File "/home/aoumeur/Téléchargements/PyTAP-main/src/pytaps/fetchdata.py", line 88, in list_remote_files
+    raise ConnectionError(f"Failed to list files on FTP server {host}/{remote_dir}. Error: {e}")
+ConnectionError: Failed to list files on FTP server ftp1.meteo.dz//share/meteofrance/Arpege_Orig. Error: Failed to connect to FTP server ftp1.meteo.dz. Error: [Errno -3] Temporary failure in name resolution
