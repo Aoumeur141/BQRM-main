@@ -38,6 +38,16 @@ logger.info(f"Logging to shared file: {log_file_path}")
 logger.info("-------------------------------------------------------------------")
 # --- End Logger Setup ---
 
+mpl_logger = logging.getLogger('matplotlib')
+# Set its level to WARNING to ignore DEBUG and INFO messages from all matplotlib sub-loggers
+mpl_logger.setLevel(logging.WARNING)
+# Optionally, prevent matplotlib logs from propagating to the root logger
+# This is a good safeguard, though setting the level should usually be sufficient.
+mpl_logger.propagate = False
+logger.info("Suppressed Matplotlib DEBUG and INFO logs.")
+# --- End suppression ---
+
+
 # Get environment variables for the current and previous day
 AA = os.environ.get('AA')
 MM = os.environ.get('MM')
