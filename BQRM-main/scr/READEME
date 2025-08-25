@@ -1,0 +1,29 @@
+Automatisation du Bulletin Météorologique Quotidien
+Ce projet vise à automatiser la génération du bulletin météorologique quotidien pour l'Algérie, comprenant le traitement des données SYNOP, l'analyse des modèles ARPEGE et la génération de cartes météorologiques.
+
+Structure du Projet: 
+     - Scripts Python pour le traitement des données, la génération de cartes, et l'envoi des rapports.
+     - Script Bash pour l'automatisation.
+     - Fichiers de configuration et templates pour la génération des documents.
+
+Prérequis:
+     - Accès aux serveurs FTP et SFTP pour récupérer les fichiers de données.
+     -  Installation des bibliothèques Python nécessaires (pdbufr, pandas, openpyxl, pygrib, eccodes, docx, matplotlib, Basemap).
+     - Chemins configurés pour les templates nécessaires dans le dossier approprié.
+
+Installation et Exécution:
+
+     - Cloner le projet dans un répertoire local.
+     - Installer les dépendances Python en utilisant pip install -r requirements.txt.
+     - Configurer le script run.sh et les paramètres de crontab pour une exécution quotidienne.
+
+
+Note Importante :
+La conversion des messages SYNOP en format BUFR repose sur la mise à jour des fichiers de liste des stations (synop2bufr_station.txt et station_list.dat).
+Ces fichiers doivent être régulièrement actualisés pour garantir la conversion correcte de toutes les stations couvertes par le BQRM.
+
+Actuellement, en l'absence des versions mises à jour de ces fichiers, la station BOUHAROUN n’est pas prise en compte lors de la conversion.
+
+Solution temporaire :
+
+Pour pallier ce problème, l’identifiant de la station JIJEL-PORT (actuellement hors service) a été temporairement attribué à la station BOUHAROUN dans le fichier 'synop2bufr_station.txt'. Cette solution permet d’inclure les données de BOUHAROUN dans le processus de conversion en attendant une mise à jour officielledes fichiers de liste des stations.
