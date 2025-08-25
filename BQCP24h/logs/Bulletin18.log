@@ -1,0 +1,74 @@
+2025-08-25 10:04:58 - Script started.
+2025-08-25 10:04:58 - Log file: logs/Bulletin18.log
+2025-08-25 10:04:58 - Date variables set: AA=2025, MM=08, DD=25
+2025-08-25 10:04:58 - Script's current working directory: PWD=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-25 10:04:58 - LOCAL_DIRECTORY set to: /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-25 10:04:58 - BUFR_INPUT_ROOT set to: bufr_data/observations
+2025-08-25 10:04:58 - TAC_INPUT set to: bqrm_data/observations
+2025-08-25 10:04:58 - Attempting to copy BUFR file from /home/aoumeur/BQRM_V01/BQCP24h/../bufr_data/observations/2025/08/25/Synop_202508250600.bufr to /home/aoumeur/BQRM_V01/BQCP24h/Synop/
+2025-08-25 10:04:58 - BUFR file Synop_202508250600.bufr copied successfully to /home/aoumeur/BQRM_V01/BQCP24h/Synop/.
+2025-08-25 10:04:58 - Changing current directory to /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-25 10:04:58 - Current directory changed to /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-25 10:04:58 - Proceeding with Python script execution as BUFR file copy was successful.
+2025-08-25 10:04:58 - Executing python3 Synop24h18.py...
+usage: Synop24h18.py [-h] year month day local_directory
+Synop24h18.py: error: the following arguments are required: year, month, day, local_directory
+ERROR (Synop24h18.py): Argument parsing failed. Exit code: 2
+2025-08-25 10:04:58 - Python script Synop24h18.py executed successfully.
+2025-08-25 10:04:58 - Navigating to /home/aoumeur/BQRM_V01/BQCP24h/templates/ to remove agricole.xlsx.
+2025-08-25 10:04:58 - agricole.xlsx not found in /home/aoumeur/BQRM_V01/BQCP24h/templates/. Skipping removal.
+2025-08-25 10:04:58 - Returning to /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-25 10:04:58 - Moving agricole_08250600.xlsx to /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx.
+mv: cannot stat 'agricole_08250600.xlsx': No such file or directory
+2025-08-25 10:04:58 - Moved agricole_08250600.xlsx successfully.
+2025-08-25 10:04:58 - Creating directory /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08 if it doesn't exist.
+2025-08-25 10:04:58 - Directory /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08 created/exists.
+2025-08-25 10:04:58 - Moving all *.txt files to /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08.
+mv: cannot stat '*.txt': No such file or directory
+2025-08-25 10:04:58 - Moved *.txt files successfully.
+2025-08-25 10:04:58 - Removing all *.xlsx files in /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-25 10:04:58 - Removed *.xlsx files successfully from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-25 10:04:58 - Removing all *.docx files in /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-25 10:04:58 - Removed *.docx files successfully from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-25 10:04:58 - Removing all *.xlsx files in /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx/.
+2025-08-25 10:04:58 - Removed *.xlsx files from /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx/ successfully.
+2025-08-25 10:04:58 - Creating backup directories: /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08 and /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/25.
+2025-08-25 10:04:58 - Copying SMAL*250600* from /home/aoumeur/BQRM_V01/BQCP24h/../../../../bqrm_data/observations/2025/08/25/ to /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/25.
+2025-08-25 10:04:58 - Script finished.
+2025-08-25 11:25:08 - Script started.
+2025-08-25 11:25:08 - Log file: logs/Bulletin18.log
+2025-08-25 11:25:08 - Date variables set: AA=2025, MM=08, DD=25
+2025-08-25 11:25:08 - Script's current working directory: PWD=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-25 11:25:08 - LOCAL_DIRECTORY set to: /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-25 11:25:08 - BUFR_INPUT_ROOT set to: bufr_data/observations
+2025-08-25 11:25:08 - TAC_INPUT set to: bqrm_data/observations
+2025-08-25 11:25:08 - Attempting to copy BUFR file from /home/aoumeur/BQRM_V01/BQCP24h/../bufr_data/observations/2025/08/25/Synop_202508250600.bufr to /home/aoumeur/BQRM_V01/BQCP24h/Synop/
+2025-08-25 11:25:08 - BUFR file Synop_202508250600.bufr copied successfully to /home/aoumeur/BQRM_V01/BQCP24h/Synop/.
+2025-08-25 11:25:08 - Changing current directory to /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-25 11:25:08 - Current directory changed to /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-25 11:25:08 - Proceeding with Python script execution as BUFR file copy was successful.
+2025-08-25 11:25:08 - Executing python3 Synop24h18.py...
+usage: Synop24h18.py [-h] year month day local_directory
+Synop24h18.py: error: the following arguments are required: year, month, day, local_directory
+ERROR (Synop24h18.py): Argument parsing failed. Exit code: 2
+2025-08-25 11:25:09 - Python script Synop24h18.py executed successfully.
+2025-08-25 11:25:09 - Navigating to /home/aoumeur/BQRM_V01/BQCP24h/templates/ to remove agricole.xlsx.
+2025-08-25 11:25:09 - agricole.xlsx not found in /home/aoumeur/BQRM_V01/BQCP24h/templates/. Skipping removal.
+2025-08-25 11:25:09 - Returning to /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-25 11:25:09 - Moving agricole_08250600.xlsx to /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx.
+mv: cannot stat 'agricole_08250600.xlsx': No such file or directory
+2025-08-25 11:25:09 - Moved agricole_08250600.xlsx successfully.
+2025-08-25 11:25:09 - Creating directory /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08 if it doesn't exist.
+2025-08-25 11:25:09 - Directory /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08 created/exists.
+2025-08-25 11:25:09 - Moving all *.txt files to /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08.
+mv: cannot stat '*.txt': No such file or directory
+2025-08-25 11:25:09 - Moved *.txt files successfully.
+2025-08-25 11:25:09 - Removing all *.xlsx files in /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-25 11:25:09 - Removed *.xlsx files successfully from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-25 11:25:09 - Removing all *.docx files in /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-25 11:25:09 - Removed *.docx files successfully from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-25 11:25:09 - Removing all *.xlsx files in /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx/.
+2025-08-25 11:25:09 - Removed *.xlsx files from /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx/ successfully.
+2025-08-25 11:25:09 - Creating backup directories: /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08 and /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/25.
+2025-08-25 11:25:09 - Copying SMAL*250600* from /home/aoumeur/BQRM_V01/BQCP24h/../../../../bqrm_data/observations/2025/08/25/ to /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/25.
+2025-08-25 11:25:09 - Script finished.
