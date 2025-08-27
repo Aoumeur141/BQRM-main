@@ -10,9 +10,7 @@ import logging # Import logging for direct use with log_level
 # Import functions from your PyTAP package
 from pytaps.logging_utils import setup_logger
 from pytaps.system_utils import execute_command
-from pytaps.fetchdata import fetch_files # Imported as requested, but not used in this script's current logic.
 from pytaps.file_operations import (
-    build_time_series_filepath, # Not used in this specific script, but useful for other date-based file paths
     check_file_exists_and_log,
     move_files_by_pattern,
     delete_files, # For deleting specific files
@@ -20,42 +18,20 @@ from pytaps.file_operations import (
     copy_directory_recursive, # New function to copy directories recursively
     ensure_parent_directory_exists # Useful for ensuring a file's parent directory exists
 )
-original_cwd = os.getcwd() 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__)) # Get the directory of the current script
-LOCAL_DIRECTORY = SCRIPT_DIR # Use SCRIPT_DIR for consistency
 
-    # --- Logging Setup ---
-log_file_base_name = "BQCP24h18"
-logger = None # Initialize logger to None for error handling
-shared_LOCAL_DIRECTORY_for_children = None # To store the path to pass to sub-scripts
+# --- Logging Setup ---
+SCRIPT_NAME = Path(__file__).stem # Gets "Bulletin18" from "Bulletin18.py"
+LOCAL_DIRECTORY = Path(os.getcwd()) # Use pathlib.Path for cleaner path handling
 
-try:
-        # This call sets up the primary log file for the main script.
-        # It will create the 'logs' directory and the 'BQCP24h.log' file within LOCAL_DIRECTORY.
-        logger, shared_LOCAL_DIRECTORY_for_children = setup_logger(
-            script_name=log_file_base_name,
-            log_directory_base=LOCAL_DIRECTORY, # This tells pytaps where to put the 'logs' folder
-            log_level=logging.INFO,
-            shared_LOCAL_DIRECTORY=None # This is the first script, so no shared path yet
-        )
-        
-        # CRITICAL CHECK: Ensure the shared log file path was successfully obtained
-        if not shared_LOCAL_DIRECTORY_for_children:
-            # If setup_logger returns None or an empty path, it's a problem with pytaps itself.
-            raise RuntimeError("pytaps.logging_utils.setup_logger did not return a valid shared log file path.")
-except Exception as e:
-        # Fallback if logging setup fails
-        print(f"CRITICAL ERROR: Failed to set up main logger. Using console fallback. Error: {e}", file=sys.stderr)
-        logger = logging.getLogger("FallbackLogger")
-        logger.setLevel(logging.INFO)
-        handler = logging.StreamHandler(sys.stderr)
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
-        logger.error("Initial logger setup failed, using fallback console logger.")
+# Setup the logger for this script using pytaps.logging_utils
+logger, log_file_path = setup_logger(
+    script_name=SCRIPT_NAME,
+    log_directory_base=str(LOCAL_DIRECTORY), # setup_logger expects string path
+    log_level=logging.INFO # You can change this to logging.DEBUG for more verbosity
+)
 
 logger.info("Script started.")
-logger.info(f"Log file: {LOCAL_DIRECTORY}")
+logger.info(f"Log file: {log_file_path}")
 
 # --- Set Date Variables ---
 AA = datetime.datetime.now().strftime('%Y')
@@ -71,28 +47,36 @@ logger.info(f"Date variables set: AA={AA}, MM={MM}, DD={DD}")
 logger.info(f"Script's current working directory: PWD={LOCAL_DIRECTORY}")
 
 # --- Define Directories and Paths ---
-# Assuming BUFR_INPUT_ROOT and TAC_INPUT are relative to the project's root directory
-# and LOCAL_DIRECTORY is where this script is executed (e.g., PyTAP-main/src/pytaps)
-# Adjust `parent.parent.parent` if your actual project structure differs.
-PROJECT_ROOT = LOCAL_DIRECTORY.parent.parent.parent # Adjust based on where your script runs relative to the 'pytap' root
-BUFR_INPUT_ROOT = PROJECT_ROOT / "bufr_data" / "observations"
-TAC_INPUT = PROJECT_ROOT / "bqrm_data" / "observations"
+# Adjust paths to strictly match the Bash script's effective source locations.
+# LOCAL_DIRECTORY is where this script is executed (e.g., PyTAP-main/src/pytaps)
 
-# Local directories for processing
+# Bash BUFR source: "${LOCAL_DIRECTORY}/../${BUFR_INPUT_ROOT}/${AA}/${MM}/${DD}/Synop_..."
+# Bash BUFR_INPUT_ROOT string: "bufr_data/observations"
+# This means the BUFR data source is relative to LOCAL_DIRECTORY.parent (i.e., 'src' directory)
+BUFR_INPUT_SOURCE_BASE = LOCAL_DIRECTORY.parent / "bufr_data" / "observations"
+
+# Bash TAC source for copy: "${LOCAL_DIRECTORY}/../../../../${TAC_INPUT}/${AA}/${MM}/${DD}"
+# Bash TAC_INPUT string: "bqrm_data/observations"
+# If LOCAL_DIRECTORY is /path/to/repo/src/pytaps, then LOCAL_DIRECTORY.parent.parent.parent is /path/to/repo.
+# This implies 'bqrm_data/observations' is under the project root.
+PROJECT_ROOT = LOCAL_DIRECTORY.parent.parent.parent # Assuming 3 levels up to project root
+TAC_INPUT_SOURCE_BASE = PROJECT_ROOT /".."/".."/".."/ "bqrm_data" / "observations"
+
+# Local directories for processing (these are relative to LOCAL_DIRECTORY in both scripts)
 BUFR_TARGET_DIR = LOCAL_DIRECTORY / "Synop"
 TXT_TARGET_BASE_DIR = LOCAL_DIRECTORY / "txt"
 CLIMXLSX_DIR = LOCAL_DIRECTORY / "Climxlsx"
 BACKUP_BASE_DIR = LOCAL_DIRECTORY / "Backup"
 
 logger.info(f"LOCAL_DIRECTORY set to: {LOCAL_DIRECTORY}")
-logger.info(f"BUFR_INPUT_ROOT set to: {BUFR_INPUT_ROOT}")
-logger.info(f"TAC_INPUT set to: {TAC_INPUT}")
+logger.info(f"BUFR_INPUT_SOURCE_BASE set to: {BUFR_INPUT_SOURCE_BASE}")
+logger.info(f"TAC_INPUT_SOURCE_BASE set to: {TAC_INPUT_SOURCE_BASE}")
 
 # --- Copy BUFR File ---
 # This acts as the "download" step in the current active script logic.
 # The original script performs a local file copy, not an FTP fetch.
 # If FTP fetching were needed, pytaps.fetchdata.fetch_files would be used here.
-bufr_source_path = BUFR_INPUT_ROOT / AA / MM / DD / f"Synop_{AA}{MM}{DD}0600.bufr"
+bufr_source_path = BUFR_INPUT_SOURCE_BASE / AA / MM / DD / f"Synop_{AA}{MM}{DD}0600.bufr"
 bufr_target_path = BUFR_TARGET_DIR / f"Synop_{AA}{MM}{DD}0600.bufr"
 
 logger.info(f"Attempting to copy BUFR file from {bufr_source_path} to {BUFR_TARGET_DIR}/")
@@ -241,8 +225,10 @@ except OSError as e:
    logger.critical(f"ERROR: Failed to create one or more backup directories. Error: {e}")
 
 # Copy SMAL* files to backup using pytaps.file_operations.copy_directory_recursive
-smal_source_dir = TAC_INPUT / AA / MM / DD
-final_smal_copy_dest = backup_daily_dir # This is where the DD directory will be copied to
+# Bash: cp -r "${LOCAL_DIRECTORY}/../../../../${TAC_INPUT}/${AA}/${MM}/${DD}" "${LOCAL_DIRECTORY}/Backup/${AA}/${MM}"
+# This means the DD directory from TAC_INPUT_SOURCE_BASE is copied into LOCAL_DIRECTORY/Backup/AA/MM
+smal_source_dir = TAC_INPUT_SOURCE_BASE / AA / MM / DD
+final_smal_copy_dest = backup_daily_dir.parent # This is LOCAL_DIRECTORY/Backup/AA/MM
 
 logger.info(f"Copying contents from {smal_source_dir} to {final_smal_copy_dest}.")
 copied_smal_dir = copy_directory_recursive(
@@ -259,4 +245,3 @@ else:
 
 
 logger.info("Script finished.")
-

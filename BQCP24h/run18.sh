@@ -17,5 +17,7 @@ export MM=$(date +%m)
 export DD=$(date +%d)
 export PWD=$(pwd)
 
-cd /home/bqrm/BQCP24h
-./Bulletin18.sh
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+LOCAL_DIRECTORY="${SCRIPT_DIR}"
+
+python3 "${LOCAL_DIRECTORY}/Bulletin18.py"

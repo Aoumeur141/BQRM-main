@@ -153,7 +153,7 @@ fi
 
 # Remove remaining .xlsx and .docx files in LOCAL_DIRECTORY
 log_message "Removing all *.xlsx files in $LOCAL_DIRECTORY."
-#rm -f *.xlsx 2>&1 | tee -a "$LOG_FILE" # Use -f to suppress error if no files match
+rm -f *.xlsx 2>&1 | tee -a "$LOG_FILE" # Use -f to suppress error if no files match
 if [ $? -eq 0 ]; then
    log_message "Removed *.xlsx files successfully from $LOCAL_DIRECTORY."
 else
@@ -161,7 +161,7 @@ else
 fi
 
 log_message "Removing all *.docx files in $LOCAL_DIRECTORY."
-#rm -f *.docx 2>&1 | tee -a "$LOG_FILE" # Use -f to suppress error if no files match
+rm -f *.docx 2>&1 | tee -a "$LOG_FILE" # Use -f to suppress error if no files match
 if [ $? -eq 0 ]; then
    log_message "Removed *.docx files successfully from $LOCAL_DIRECTORY."
 else
@@ -170,7 +170,7 @@ fi
 
 # Remove .xlsx files from Climxlsx directory
 log_message "Removing all *.xlsx files in $LOCAL_DIRECTORY/Climxlsx/."
-#rm -f "$LOCAL_DIRECTORY/Climxlsx/"*.xlsx 2>&1 | tee -a "$LOG_FILE" # Use -f for robustness
+rm -f "$LOCAL_DIRECTORY/Climxlsx/"*.xlsx 2>&1 | tee -a "$LOG_FILE" # Use -f for robustness
 if [ $? -eq 0 ]; then
    log_message "Removed *.xlsx files from $LOCAL_DIRECTORY/Climxlsx/ successfully."
 else

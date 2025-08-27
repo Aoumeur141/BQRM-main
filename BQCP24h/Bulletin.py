@@ -224,12 +224,12 @@ def main():
 
     # Remove *.docx files from LOCAL_DIRECTORY using pytaps.file_operations.clean_directory
     logger.info(f"Removing *.docx files from {LOCAL_DIRECTORY}.")
-    clean_directory(LOCAL_DIRECTORY, file_pattern="*.docx", logger_instance=logger)
+    #clean_directory(LOCAL_DIRECTORY, file_pattern="*.docx", logger_instance=logger)
 
     # Remove *.xlsx files from LOCAL_DIRECTORY/Climxlsx/ using pytaps.file_operations.clean_directory
-    climxlsx_dir = os.path.join(LOCAL_DIRECTORY, "Climxlsx")
-    logger.info(f"Removing *.xlsx files from {climxlsx_dir}.")
-    clean_directory(climxlsx_dir, file_pattern="*.xlsx", logger_instance=logger)
+    #climxlsx_dir = os.path.join(LOCAL_DIRECTORY, "Climxlsx")
+    #logger.info(f"Removing *.xlsx files from {climxlsx_dir}.")
+    #clean_directory(climxlsx_dir, file_pattern="*.xlsx", logger_instance=logger)
 
     # Create backup directories
     backup_base_dir = os.path.join(LOCAL_DIRECTORY, "Backup", AA, MM)

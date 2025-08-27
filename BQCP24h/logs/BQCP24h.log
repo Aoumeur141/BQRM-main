@@ -6275,3 +6275,726 @@ subprocess.CalledProcessError: Command '['python3', 'send_MSG.py', '2025', '08',
 2025-08-25 14:48:21,204 - INFO - Bulletin:257 - TAC data copy to backup successful.
 2025-08-25 14:48:21,204 - INFO - Bulletin:263 - Script finished.
 2025-08-25 14:48:21,204 - INFO - Bulletin:277 - Cleaned up PYTAPS_SHARED_LOG_FILE environment variable.
+2025-08-26 11:11:01,344 - INFO - Bulletin:62 - Script started: Bufr and Arpege Data Retrieval and Processing.
+2025-08-26 11:11:01,344 - INFO - Bulletin:64 - All logs will be written to: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:11:01,345 - INFO - Bulletin:69 - Set environment variable PYTAPS_SHARED_LOG_FILE to: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:11:01,345 - INFO - Bulletin:73 - Current Year (AA): 2025
+2025-08-26 11:11:01,345 - INFO - Bulletin:74 - Current Month (MM): 08
+2025-08-26 11:11:01,345 - INFO - Bulletin:75 - Current Day (DD): 26
+2025-08-26 11:11:01,345 - INFO - Bulletin:76 - Script Directory (SCRIPT_DIR): /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:11:01,345 - INFO - Bulletin:88 - BUFR Input Root: bufr_data/observations
+2025-08-26 11:11:01,345 - INFO - Bulletin:89 - TAC Input Root: bqrm_data/observations
+2025-08-26 11:11:01,345 - INFO - Bulletin:90 - FTP Server: 10.16.80.222
+2025-08-26 11:11:01,345 - INFO - Bulletin:91 - Local Directory for downloads: /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:11:01,345 - INFO - Bulletin:103 - Attempting to connect to FTP server 10.16.80.222 and download exported_data_2025-08-26.csv.
+2025-08-26 11:11:01,345 - INFO - fetchdata:171 - Starting FTP file fetching process for 1 files.
+2025-08-26 11:11:01,345 - INFO - fetchdata:17 - Attempting to connect to FTP server 10.16.80.222:21...
+2025-08-26 11:11:01,529 - INFO - fetchdata:20 - Successfully connected and logged in to 10.16.80.222.
+2025-08-26 11:11:01,530 - INFO - fetchdata:227 - Local file exported_data_2025-08-26.csv is missing. Downloading.
+2025-08-26 11:11:01,530 - INFO - fetchdata:230 - Downloading /exported_data_2025-08-26.csv to /home/aoumeur/BQRM_V01/BQCP24h/exported_data_2025-08-26.csv
+2025-08-26 11:11:01,737 - INFO - fetchdata:239 - Successfully downloaded exported_data_2025-08-26.csv
+2025-08-26 11:11:01,773 - INFO - fetchdata:257 - FTP client closed.
+2025-08-26 11:11:01,774 - INFO - fetchdata:261 - FTP file fetching process completed.
+2025-08-26 11:11:01,774 - INFO - Bulletin:128 - FTP download of exported_data_2025-08-26.csv successful.
+2025-08-26 11:11:01,774 - INFO - Bulletin:133 - Moved exported_data_2025-08-26.csv to /home/aoumeur/BQRM_V01/BQCP24h/Clim.
+2025-08-26 11:11:01,775 - INFO - Bulletin:152 - Attempting to copy BUFR Synop file from /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/26/Synop_202508260600.bufr to /home/aoumeur/BQRM_V01/BQCP24h/Synop.
+2025-08-26 11:11:01,775 - WARNING - file_operations:242 - File not found: /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/26/Synop_202508260600.bufr. Skipping this operation.
+2025-08-26 11:11:01,776 - ERROR - Bulletin:162 - BUFR Synop file not found at source: /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/26/Synop_202508260600.bufr. Skipping copy.
+2025-08-26 11:11:01,776 - INFO - Bulletin:173 - Changed directory to /home/aoumeur/BQRM_V01/BQCP24h for Python script execution.
+2025-08-26 11:11:01,776 - ERROR - Bulletin:200 - Skipping Python script execution due to previous failures (FTP download or BUFR file copy).
+2025-08-26 11:11:01,776 - INFO - Bulletin:211 - Starting post-processing and cleanup operations.
+2025-08-26 11:11:01,776 - INFO - Bulletin:215 - Moving *.txt files to /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08.
+2025-08-26 11:11:01,777 - INFO - file_operations:90 - No files found matching pattern '*.txt' in '/home/aoumeur/BQRM_V01/BQCP24h'.
+2025-08-26 11:11:01,778 - INFO - Bulletin:218 - No *.txt files found to move or all failed.
+2025-08-26 11:11:01,778 - INFO - Bulletin:226 - Removing *.docx files from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 11:11:01,778 - INFO - file_operations:283 - Starting cleanup of directory: /home/aoumeur/BQRM_V01/BQCP24h (Pattern: *.docx)
+2025-08-26 11:11:01,780 - INFO - file_operations:300 - Finished cleanup. Successfully deleted 0 files from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 11:11:01,780 - INFO - Bulletin:231 - Removing *.xlsx files from /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx.
+2025-08-26 11:11:01,780 - INFO - file_operations:283 - Starting cleanup of directory: /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx (Pattern: *.xlsx)
+2025-08-26 11:11:01,781 - INFO - file_operations:300 - Finished cleanup. Successfully deleted 0 files from /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx.
+2025-08-26 11:11:01,781 - INFO - Bulletin:237 - Creating backup directories: /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08 and /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 11:11:01,781 - INFO - Bulletin:241 - Backup directories created successfully.
+2025-08-26 11:11:01,782 - INFO - Bulletin:249 - Copying SMAL* data from /bqrm_data/observations/2025/08/26 to /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 11:11:01,782 - INFO - file_operations:339 - Attempting to copy directory from '/bqrm_data/observations/2025/08/26' to '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26'.
+2025-08-26 11:11:01,783 - INFO - file_operations:355 - Destination directory '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26' exists. Removing it before copying.
+2025-08-26 11:11:01,792 - INFO - file_operations:370 - Successfully copied directory from '/bqrm_data/observations/2025/08/26' to '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26'.
+2025-08-26 11:11:01,793 - INFO - Bulletin:257 - TAC data copy to backup successful.
+2025-08-26 11:11:01,793 - INFO - Bulletin:263 - Script finished.
+2025-08-26 11:11:01,793 - INFO - Bulletin:277 - Cleaned up PYTAPS_SHARED_LOG_FILE environment variable.
+2025-08-26 11:14:05,365 - INFO - Bulletin:62 - Script started: Bufr and Arpege Data Retrieval and Processing.
+2025-08-26 11:14:05,366 - INFO - Bulletin:64 - All logs will be written to: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:14:05,366 - INFO - Bulletin:69 - Set environment variable PYTAPS_SHARED_LOG_FILE to: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:14:05,366 - INFO - Bulletin:73 - Current Year (AA): 2025
+2025-08-26 11:14:05,366 - INFO - Bulletin:74 - Current Month (MM): 08
+2025-08-26 11:14:05,366 - INFO - Bulletin:75 - Current Day (DD): 26
+2025-08-26 11:14:05,366 - INFO - Bulletin:76 - Script Directory (SCRIPT_DIR): /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:14:05,366 - INFO - Bulletin:88 - BUFR Input Root: bufr_data/observations
+2025-08-26 11:14:05,366 - INFO - Bulletin:89 - TAC Input Root: bqrm_data/observations
+2025-08-26 11:14:05,366 - INFO - Bulletin:90 - FTP Server: 10.16.80.222
+2025-08-26 11:14:05,366 - INFO - Bulletin:91 - Local Directory for downloads: /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:14:05,366 - INFO - Bulletin:103 - Attempting to connect to FTP server 10.16.80.222 and download exported_data_2025-08-26.csv.
+2025-08-26 11:14:05,366 - INFO - fetchdata:171 - Starting FTP file fetching process for 1 files.
+2025-08-26 11:14:05,366 - INFO - fetchdata:17 - Attempting to connect to FTP server 10.16.80.222:21...
+2025-08-26 11:14:05,370 - INFO - fetchdata:20 - Successfully connected and logged in to 10.16.80.222.
+2025-08-26 11:14:05,370 - INFO - fetchdata:227 - Local file exported_data_2025-08-26.csv is missing. Downloading.
+2025-08-26 11:14:05,370 - INFO - fetchdata:230 - Downloading /exported_data_2025-08-26.csv to /home/aoumeur/BQRM_V01/BQCP24h/exported_data_2025-08-26.csv
+2025-08-26 11:14:05,374 - INFO - fetchdata:239 - Successfully downloaded exported_data_2025-08-26.csv
+2025-08-26 11:14:05,375 - INFO - fetchdata:257 - FTP client closed.
+2025-08-26 11:14:05,375 - INFO - fetchdata:261 - FTP file fetching process completed.
+2025-08-26 11:14:05,375 - INFO - Bulletin:128 - FTP download of exported_data_2025-08-26.csv successful.
+2025-08-26 11:14:05,375 - INFO - Bulletin:133 - Moved exported_data_2025-08-26.csv to /home/aoumeur/BQRM_V01/BQCP24h/Clim.
+2025-08-26 11:14:05,376 - INFO - Bulletin:152 - Attempting to copy BUFR Synop file from /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/26/Synop_202508260600.bufr to /home/aoumeur/BQRM_V01/BQCP24h/Synop.
+2025-08-26 11:14:05,376 - INFO - Bulletin:159 - BUFR Synop file copy successful.
+2025-08-26 11:14:05,376 - INFO - Bulletin:173 - Changed directory to /home/aoumeur/BQRM_V01/BQCP24h for Python script execution.
+2025-08-26 11:14:05,376 - INFO - Bulletin:179 - Both FTP download and BUFR file copy were successful. Proceeding with Python script execution.
+2025-08-26 11:14:05,376 - INFO - Bulletin:184 - Executing python3 csvtoxlsx.py...
+2025-08-26 11:14:05,376 - INFO - system_utils:36 - Executing command: python3 csvtoxlsx.py 2025 08 26 /home/aoumeur/BQRM_V01/BQCP24h in directory: '/home/aoumeur/BQRM_V01/BQCP24h'
+2025-08-26 11:14:05,778 - INFO - csvtoxlsx:54 - Shared log file path from environment: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:14:05,778 - INFO - csvtoxlsx:68 - Script csvtoxlsx.py started with args: Year=2025, Month=08, Day=26, LocalDir=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:14:05,781 - INFO - csvtoxlsx:74 - Successfully read CSV file: /home/aoumeur/BQRM_V01/BQCP24h/Clim/exported_data_2025-08-26.csv
+2025-08-26 11:14:05,785 - INFO - csvtoxlsx:95 - Data reshaped successfully.
+2025-08-26 11:14:05,796 - INFO - csvtoxlsx:119 - Data has been reshaped and saved to /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx/data_2025-08-26.xlsx
+2025-08-26 11:14:05,796 - INFO - csvtoxlsx:124 - Script csvtoxlsx.py finished.
+2025-08-26 11:14:05,857 - INFO - system_utils:47 - Command 'python3' completed successfully.
+2025-08-26 11:14:05,857 - INFO - Bulletin:196 - csvtoxlsx.py executed successfully.
+2025-08-26 11:14:05,857 - INFO - Bulletin:184 - Executing python3 Synop24h.py...
+2025-08-26 11:14:05,857 - INFO - system_utils:36 - Executing command: python3 Synop24h.py 2025 08 26 /home/aoumeur/BQRM_V01/BQCP24h in directory: '/home/aoumeur/BQRM_V01/BQCP24h'
+2025-08-26 11:14:06,413 - INFO - Synop24h:54 - Shared log file path from environment: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:14:06,413 - INFO - Synop24h:63 - Script Synop24h.py started with args: Year=2025, Month=08, Day=26, LocalDir=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:14:06,414 - INFO - Synop24h:77 - Constructed file paths:
+2025-08-26 11:14:06,414 - INFO - Synop24h:78 -   BUFR file: /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr
+2025-08-26 11:14:06,414 - INFO - Synop24h:79 -   24h Excel template: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul24.xlsx
+2025-08-26 11:14:06,414 - INFO - Synop24h:80 -   Agri Excel template: /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx
+2025-08-26 11:14:06,414 - INFO - Synop24h:81 -   Output 24h Excel: /home/aoumeur/BQRM_V01/BQCP24h/cumul24_08260600.xlsx
+2025-08-26 11:14:06,414 - INFO - Synop24h:82 -   Output Agri Excel: /home/aoumeur/BQRM_V01/BQCP24h/agricole_08260600.xlsx
+2025-08-26 11:14:06,414 - INFO - Synop24h:83 -   Word template: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul.docx
+2025-08-26 11:14:06,414 - INFO - Synop24h:84 -   Output Word: /home/aoumeur/BQRM_V01/BQCP24h/Cumul_table08260600.docx
+2025-08-26 11:14:06,414 - INFO - Synop24h:85 -   Station mapping file: /home/aoumeur/BQRM_V01/BQCP24h/ListStation.json
+2025-08-26 11:14:06,414 - INFO - Synop24h:86 -   Missing stations log: /home/aoumeur/BQRM_V01/BQCP24h/Synop20250826-06.txt
+2025-08-26 11:14:06,415 - INFO - Synop24h:87 -   Month translation file: /home/aoumeur/BQRM_V01/BQCP24h/month_translation.json
+2025-08-26 11:14:06,415 - INFO - Synop24h:102 - Attempting to load station mapping from /home/aoumeur/BQRM_V01/BQCP24h/ListStation.json...
+2025-08-26 11:14:06,415 - INFO - Synop24h:105 - Successfully loaded station mapping from /home/aoumeur/BQRM_V01/BQCP24h/ListStation.json. Found 68 stations.
+2025-08-26 11:14:06,415 - INFO - Synop24h:115 - Today's date: 2025-08-26
+2025-08-26 11:14:06,415 - INFO - Synop24h:122 - Cumulative precipitation will not be reset.
+2025-08-26 11:14:06,416 - INFO - data_utils:319 - Attempting to read BUFR file: /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr for columns: ['stationOrSiteName', 'totalPrecipitationOrTotalWaterEquivalent', 'timePeriod'] with kwargs: {}
+2025-08-26 11:14:06,555 - INFO - data_utils:328 - Successfully loaded BUFR data from /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr. DataFrame shape: (152, 3)
+2025-08-26 11:14:06,555 - INFO - Synop24h:143 - Columns renamed in DataFrame.
+2025-08-26 11:14:06,556 - INFO - Synop24h:147 - Filtered for 24-hour precipitation (Time == -24). Records found: 76
+2025-08-26 11:14:06,558 - INFO - Synop24h:155 - Selected 'SYNOP_STATION_NAME' and 'Précip (mm)' columns. Current DataFrame shape: (76, 2)
+2025-08-26 11:14:06,558 - INFO - Synop24h:159 - DataFrame sorted by 'SYNOP_STATION_NAME'.
+2025-08-26 11:14:06,558 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul24.xlsx
+2025-08-26 11:14:06,579 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul24.xlsx, active sheet: 'Feuille1'
+2025-08-26 11:14:06,579 - INFO - Synop24h:187 - Updating 24-hour precipitation Excel file with data.
+2025-08-26 11:14:06,581 - WARNING - Synop24h:208 - Row 3: Station 'Relizane' (RELIZANE) not found in BUFR data. Marked as missing.
+2025-08-26 11:14:06,584 - WARNING - Synop24h:208 - Row 6: Station 'Oran-Tafraoui' (ORAN-TAFARAOUI) not found in BUFR data. Marked as missing.
+2025-08-26 11:14:06,589 - WARNING - Synop24h:208 - Row 11: Station 'El-Kheiter' (EL-KHEITER) not found in BUFR data. Marked as missing.
+2025-08-26 11:14:06,589 - WARNING - Synop24h:208 - Row 12: Station 'Médéa' (MEDEA) not found in BUFR data. Marked as missing.
+2025-08-26 11:14:06,600 - WARNING - Synop24h:208 - Row 24: Station 'Ain-Safra' (AIN-SEFRA) not found in BUFR data. Marked as missing.
+2025-08-26 11:14:06,614 - INFO - Synop24h:224 - Updated 24-hour precipitation Excel file saved to /home/aoumeur/BQRM_V01/BQCP24h/cumul24_08260600.xlsx
+2025-08-26 11:14:06,615 - INFO - Synop24h:237 - Missing stations list saved to /home/aoumeur/BQRM_V01/BQCP24h/Synop20250826-06.txt. Total unique missing stations: 5
+2025-08-26 11:14:06,615 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx
+2025-08-26 11:14:06,615 - CRITICAL - data_utils:287 - Error: Excel file not found at /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx. Please ensure the file exists.
+2025-08-26 11:14:06,615 - CRITICAL - Synop24h:250 - Cumulative precipitation Excel template not found at /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx. Exiting script.
+2025-08-26 11:14:06,700 - ERROR - system_utils:57 - Command 'python3 Synop24h.py 2025 08 26 /home/aoumeur/BQRM_V01/BQCP24h' failed with exit code 1.
+2025-08-26 11:14:06,701 - ERROR - system_utils:58 - STDOUT: 2025-08-26 11:14:06,413 - INFO - Synop24h:54 - Shared log file path from environment: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:14:06,413 - INFO - Synop24h:63 - Script Synop24h.py started with args: Year=2025, Month=08, Day=26, LocalDir=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:14:06,414 - INFO - Synop24h:77 - Constructed file paths:
+2025-08-26 11:14:06,414 - INFO - Synop24h:78 -   BUFR file: /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr
+2025-08-26 11:14:06,414 - INFO - Synop24h:79 -   24h Excel template: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul24.xlsx
+2025-08-26 11:14:06,414 - INFO - Synop24h:80 -   Agri Excel template: /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx
+2025-08-26 11:14:06,414 - INFO - Synop24h:81 -   Output 24h Excel: /home/aoumeur/BQRM_V01/BQCP24h/cumul24_08260600.xlsx
+2025-08-26 11:14:06,414 - INFO - Synop24h:82 -   Output Agri Excel: /home/aoumeur/BQRM_V01/BQCP24h/agricole_08260600.xlsx
+2025-08-26 11:14:06,414 - INFO - Synop24h:83 -   Word template: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul.docx
+2025-08-26 11:14:06,414 - INFO - Synop24h:84 -   Output Word: /home/aoumeur/BQRM_V01/BQCP24h/Cumul_table08260600.docx
+2025-08-26 11:14:06,414 - INFO - Synop24h:85 -   Station mapping file: /home/aoumeur/BQRM_V01/BQCP24h/ListStation.json
+2025-08-26 11:14:06,414 - INFO - Synop24h:86 -   Missing stations log: /home/aoumeur/BQRM_V01/BQCP24h/Synop20250826-06.txt
+2025-08-26 11:14:06,415 - INFO - Synop24h:87 -   Month translation file: /home/aoumeur/BQRM_V01/BQCP24h/month_translation.json
+2025-08-26 11:14:06,415 - INFO - Synop24h:102 - Attempting to load station mapping from /home/aoumeur/BQRM_V01/BQCP24h/ListStation.json...
+2025-08-26 11:14:06,415 - INFO - Synop24h:105 - Successfully loaded station mapping from /home/aoumeur/BQRM_V01/BQCP24h/ListStation.json. Found 68 stations.
+2025-08-26 11:14:06,415 - INFO - Synop24h:115 - Today's date: 2025-08-26
+2025-08-26 11:14:06,415 - INFO - Synop24h:122 - Cumulative precipitation will not be reset.
+2025-08-26 11:14:06,416 - INFO - data_utils:319 - Attempting to read BUFR file: /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr for columns: ['stationOrSiteName', 'totalPrecipitationOrTotalWaterEquivalent', 'timePeriod'] with kwargs: {}
+2025-08-26 11:14:06,555 - INFO - data_utils:328 - Successfully loaded BUFR data from /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr. DataFrame shape: (152, 3)
+2025-08-26 11:14:06,555 - INFO - Synop24h:143 - Columns renamed in DataFrame.
+2025-08-26 11:14:06,556 - INFO - Synop24h:147 - Filtered for 24-hour precipitation (Time == -24). Records found: 76
+2025-08-26 11:14:06,558 - INFO - Synop24h:155 - Selected 'SYNOP_STATION_NAME' and 'Précip (mm)' columns. Current DataFrame shape: (76, 2)
+2025-08-26 11:14:06,558 - INFO - Synop24h:159 - DataFrame sorted by 'SYNOP_STATION_NAME'.
+2025-08-26 11:14:06,558 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul24.xlsx
+2025-08-26 11:14:06,579 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul24.xlsx, active sheet: 'Feuille1'
+2025-08-26 11:14:06,579 - INFO - Synop24h:187 - Updating 24-hour precipitation Excel file with data.
+2025-08-26 11:14:06,581 - WARNING - Synop24h:208 - Row 3: Station 'Relizane' (RELIZANE) not found in BUFR data. Marked as missing.
+2025-08-26 11:14:06,584 - WARNING - Synop24h:208 - Row 6: Station 'Oran-Tafraoui' (ORAN-TAFARAOUI) not found in BUFR data. Marked as missing.
+2025-08-26 11:14:06,589 - WARNING - Synop24h:208 - Row 11: Station 'El-Kheiter' (EL-KHEITER) not found in BUFR data. Marked as missing.
+2025-08-26 11:14:06,589 - WARNING - Synop24h:208 - Row 12: Station 'Médéa' (MEDEA) not found in BUFR data. Marked as missing.
+2025-08-26 11:14:06,600 - WARNING - Synop24h:208 - Row 24: Station 'Ain-Safra' (AIN-SEFRA) not found in BUFR data. Marked as missing.
+2025-08-26 11:14:06,614 - INFO - Synop24h:224 - Updated 24-hour precipitation Excel file saved to /home/aoumeur/BQRM_V01/BQCP24h/cumul24_08260600.xlsx
+2025-08-26 11:14:06,615 - INFO - Synop24h:237 - Missing stations list saved to /home/aoumeur/BQRM_V01/BQCP24h/Synop20250826-06.txt. Total unique missing stations: 5
+2025-08-26 11:14:06,615 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx
+2025-08-26 11:14:06,615 - CRITICAL - data_utils:287 - Error: Excel file not found at /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx. Please ensure the file exists.
+2025-08-26 11:14:06,615 - CRITICAL - Synop24h:250 - Cumulative precipitation Excel template not found at /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx. Exiting script.
+2025-08-26 11:14:06,701 - ERROR - system_utils:59 - STDERR: 
+2025-08-26 11:14:06,701 - ERROR - Bulletin:198 - Error executing Synop24h.py: Command '['python3', 'Synop24h.py', '2025', '08', '26', '/home/aoumeur/BQRM_V01/BQCP24h']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/home/aoumeur/BQRM_V01/BQCP24h/Bulletin.py", line 195, in main
+    execute_command(command_to_execute, cwd=LOCAL_DIRECTORY)
+  File "/home/aoumeur/Téléchargements/PyTAP-main/src/pytaps/system_utils.py", line 39, in execute_command
+    result = subprocess.run(
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', 'Synop24h.py', '2025', '08', '26', '/home/aoumeur/BQRM_V01/BQCP24h']' returned non-zero exit status 1.
+2025-08-26 11:14:06,702 - INFO - Bulletin:184 - Executing python3 SynoClim.py...
+2025-08-26 11:14:06,702 - INFO - system_utils:36 - Executing command: python3 SynoClim.py 2025 08 26 /home/aoumeur/BQRM_V01/BQCP24h in directory: '/home/aoumeur/BQRM_V01/BQCP24h'
+2025-08-26 11:14:07,245 - INFO - SynoClim:53 - Script SynoClim.py started with args: Year=2025, Month=08, Day=26, LocalDir=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:14:07,245 - INFO - SynoClim:66 - Configured file paths:
+2025-08-26 11:14:07,245 - INFO - SynoClim:67 -   BUFR file: /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr
+2025-08-26 11:14:07,245 - INFO - SynoClim:68 -   Excel template: /home/aoumeur/BQRM_V01/BQCP24h/templates/template.xlsx
+2025-08-26 11:14:07,245 - INFO - SynoClim:69 -   Output Excel: /home/aoumeur/BQRM_V01/BQCP24h/synop_precip_output2025260600.xlsx
+2025-08-26 11:14:07,245 - INFO - SynoClim:70 -   Word template: /home/aoumeur/BQRM_V01/BQCP24h/templates/doc_template.docx
+2025-08-26 11:14:07,245 - INFO - SynoClim:71 -   Output Word: /home/aoumeur/BQRM_V01/BQCP24h/SynopClim_precip_table08260600.docx
+2025-08-26 11:14:07,245 - INFO - SynoClim:72 -   Missing stations file: /home/aoumeur/BQRM_V01/BQCP24h/20250826.txt
+2025-08-26 11:14:07,245 - INFO - SynoClim:73 -   JSON mapping file: /home/aoumeur/BQRM_V01/BQCP24h/climaticstations.json
+2025-08-26 11:14:07,245 - INFO - SynoClim:74 -   Climatic Excel data: /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx/data_2025-08-26.xlsx
+2025-08-26 11:14:07,245 - INFO - SynoClim:75 -   Month translation JSON: /home/aoumeur/BQRM_V01/BQCP24h/month_translation.json
+2025-08-26 11:14:07,246 - INFO - SynoClim:86 - Attempting to read BUFR file: /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr
+2025-08-26 11:14:07,385 - INFO - SynoClim:91 - Successfully read BUFR file. Initial DataFrame shape: (152, 3)
+2025-08-26 11:14:07,390 - INFO - SynoClim:98 - Renaming DataFrame columns.
+2025-08-26 11:14:07,390 - INFO - SynoClim:105 - Filtering for 24-hour precipitation (Time == -24).
+2025-08-26 11:14:07,391 - INFO - SynoClim:107 - Filtered 24-hour precipitation DataFrame shape: (76, 3)
+2025-08-26 11:14:07,394 - INFO - SynoClim:111 - Dropping rows with missing station names.
+2025-08-26 11:14:07,395 - INFO - SynoClim:114 - Dropped 0 rows with missing station names. New shape: (76, 3)
+2025-08-26 11:14:07,396 - INFO - SynoClim:121 - Attempting to load Excel template: /home/aoumeur/BQRM_V01/BQCP24h/templates/template.xlsx
+2025-08-26 11:14:07,396 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/template.xlsx
+2025-08-26 11:14:07,479 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/template.xlsx, active sheet: 'Feuille1'
+2025-08-26 11:14:07,480 - INFO - SynoClim:123 - Successfully loaded Excel template.
+2025-08-26 11:14:07,480 - INFO - SynoClim:138 - Attempting to load JSON mapping file: /home/aoumeur/BQRM_V01/BQCP24h/climaticstations.json
+2025-08-26 11:14:07,480 - INFO - SynoClim:141 - Successfully loaded JSON mapping. 49 entries found.
+2025-08-26 11:14:07,480 - INFO - SynoClim:166 - Additional Excel file found: /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx/data_2025-08-26.xlsx. Attempting to load.
+2025-08-26 11:14:07,492 - INFO - SynoClim:171 - Successfully loaded additional Excel file. Columns: ['Station', 'Precipitation']
+2025-08-26 11:14:07,496 - INFO - SynoClim:199 - Starting to loop through Excel template rows to populate precipitation values.
+2025-08-26 11:14:07,497 - INFO - SynoClim:229 -   Station 'MATRIOUNE' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,498 - INFO - SynoClim:229 -   Station 'AOULEF' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,499 - INFO - SynoClim:229 -   Station 'REGGANE' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,508 - INFO - SynoClim:258 -   Station 'REGHAIA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,509 - INFO - SynoClim:258 -   Station 'BORDJ-EL-BAHRI' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,509 - INFO - SynoClim:229 -   Station 'SOUK OUFELLA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,510 - INFO - SynoClim:258 -   Station 'EL-HARRACH' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,511 - INFO - SynoClim:258 -   Station 'BARAKI' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,512 - INFO - SynoClim:258 -   Station 'KOUBA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,513 - INFO - SynoClim:258 -   Station 'OUED KORICH' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,514 - INFO - SynoClim:258 -   Station 'BOUZAREAH' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,515 - INFO - SynoClim:258 -   Station 'AIN-BENIAN' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,516 - INFO - SynoClim:258 -   Station 'MAHALMA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,521 - INFO - SynoClim:229 -   Station 'TIKDJDA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,523 - INFO - SynoClim:229 -   Station 'ABDENNIZI' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,525 - INFO - SynoClim:229 -   Station 'TIRIRINE' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,527 - INFO - SynoClim:229 -   Station 'AMGUID' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,528 - INFO - SynoClim:229 -   Station 'MERTOUTEK' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,529 - INFO - SynoClim:229 -   Station 'MOULAY-LAHCEN' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,530 - INFO - SynoClim:229 -   Station 'ARAK' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,531 - INFO - SynoClim:258 -   Station 'SKIKDA PORT' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,536 - INFO - SynoClim:229 -   Station 'IN AZAOUA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,537 - INFO - SynoClim:258 -   Station 'BOUCHEGOUF' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,540 - INFO - SynoClim:229 -   Station 'MEDEA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,544 - INFO - SynoClim:258 -   Station 'AIN-SEFRA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,549 - INFO - SynoClim:258 -   Station 'TALMINE' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,550 - INFO - SynoClim:258 -   Station 'BIDON-5' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,551 - INFO - SynoClim:229 -   Station 'ORAN-TAFARAOUI' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,552 - INFO - SynoClim:258 -   Station 'OUALLEN' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,553 - INFO - SynoClim:229 -   Station 'EL KHEITER' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,554 - INFO - SynoClim:258 -   Station 'OULED DJELLAL' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,555 - INFO - SynoClim:258 -   Station 'TABELBALA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,557 - INFO - SynoClim:258 -   Station 'TAGUENTOUR' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,559 - INFO - SynoClim:258 -   Station 'ANESBARAKA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,561 - INFO - SynoClim:229 -   Station 'EL-KALA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,561 - INFO - SynoClim:258 -   Station 'IN ATEI' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,564 - INFO - SynoClim:258 -   Station 'TINALKOUN' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,565 - INFO - SynoClim:258 -   Station 'BORDJ-HAOUS' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,566 - INFO - SynoClim:258 -   Station 'OUED ARIKINE' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,568 - INFO - SynoClim:258 -   Station 'EL M’GHAIR' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,569 - INFO - SynoClim:229 -   Station 'CHERCHELL' not found in any data source. Marked as missing ('/').
+2025-08-26 11:14:07,570 - INFO - SynoClim:266 - Finished populating Excel template. Total missing stations identified: 41
+2025-08-26 11:14:07,570 - INFO - SynoClim:271 - Attempting to save updated Excel file to: /home/aoumeur/BQRM_V01/BQCP24h/synop_precip_output2025260600.xlsx
+2025-08-26 11:14:07,593 - INFO - SynoClim:273 - Precipitation values successfully inserted into /home/aoumeur/BQRM_V01/BQCP24h/synop_precip_output2025260600.xlsx
+2025-08-26 11:14:07,593 - INFO - SynoClim:279 - Attempting to save missing stations list to: /home/aoumeur/BQRM_V01/BQCP24h/20250826.txt
+2025-08-26 11:14:07,593 - INFO - SynoClim:285 - Missing stations saved in /home/aoumeur/BQRM_V01/BQCP24h/20250826.txt
+2025-08-26 11:14:07,593 - INFO - SynoClim:295 - Attempting to load Word template: /home/aoumeur/BQRM_V01/BQCP24h/templates/doc_template.docx
+2025-08-26 11:14:07,605 - INFO - SynoClim:297 - Successfully loaded Word template.
+2025-08-26 11:14:07,605 - INFO - SynoClim:308 - Attempting to load month_translation.json from /home/aoumeur/BQRM_V01/BQCP24h/month_translation.json.
+2025-08-26 11:14:07,605 - INFO - SynoClim:311 - Successfully loaded month translation JSON.
+2025-08-26 11:14:07,605 - INFO - SynoClim:333 - Generated date line for Word document: 'Quantités de pluie enregistrée du 25 Août 2025 à 06h au 26 Août 2025 à 06h.'
+2025-08-26 11:14:07,605 - INFO - SynoClim:337 - Attempting to update the first table (date line) in the Word document.
+2025-08-26 11:14:07,607 - INFO - SynoClim:359 - Attempting to populate the second table (precipitation data) in the Word document.
+2025-08-26 11:14:08,951 - INFO - SynoClim:389 - Finished populating Word document table.
+2025-08-26 11:14:08,951 - INFO - SynoClim:392 - Attempting to save filled Word document to: /home/aoumeur/BQRM_V01/BQCP24h/SynopClim_precip_table08260600.docx
+2025-08-26 11:14:08,962 - INFO - SynoClim:394 - Precipitation values successfully inserted and formatted in /home/aoumeur/BQRM_V01/BQCP24h/SynopClim_precip_table08260600.docx
+2025-08-26 11:14:08,962 - INFO - SynoClim:401 - Script SynoClim.py finished.
+2025-08-26 11:14:09,052 - INFO - system_utils:47 - Command 'python3' completed successfully.
+2025-08-26 11:14:09,052 - INFO - Bulletin:196 - SynoClim.py executed successfully.
+2025-08-26 11:14:09,052 - INFO - Bulletin:184 - Executing python3 send_MSG.py...
+2025-08-26 11:14:09,052 - INFO - system_utils:36 - Executing command: python3 send_MSG.py 2025 08 26 /home/aoumeur/BQRM_V01/BQCP24h in directory: '/home/aoumeur/BQRM_V01/BQCP24h'
+2025-08-26 11:14:09,115 - INFO - send_MSG:85 - Shared log file path from environment: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:14:09,116 - INFO - send_MSG:86 - Logger initialized for send_MSG. Log file: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:14:09,116 - INFO - send_MSG:87 - Starting daily weather bulletin sending script.
+2025-08-26 11:14:09,116 - INFO - date_time_utils:56 - Processed dates - Today: 2025-08-26, Yesterday: 2025-08-25
+2025-08-26 11:14:09,116 - WARNING - file_operations:242 - File not found: /home/aoumeur/BQRM_V01/BQCP24h/Cumul_table08260600.docx. Skipping this operation.
+2025-08-26 11:14:09,116 - WARNING - send_MSG:116 - File not found, will not be attached: /home/aoumeur/BQRM_V01/BQCP24h/Cumul_table08260600.docx
+2025-08-26 11:14:09,116 - INFO - send_MSG:114 - File found and added for attachment: /home/aoumeur/BQRM_V01/BQCP24h/SynopClim_precip_table08260600.docx
+2025-08-26 11:14:09,116 - INFO - send_MSG:131 - Attempting to send email with subject: 'Bulletin du 26/08/2025' to aoumeurmohamed2404@gmail.com
+2025-08-26 11:14:09,116 - INFO - email_utils:30 - Attempting to send email from 'pnt@meteo.dz' to ['aoumeurmohamed2404@gmail.com'] with subject: 'Bulletin du 26/08/2025'
+2025-08-26 11:14:09,322 - INFO - email_utils:71 - Email successfully sent to 'aoumeurmohamed2404@gmail.com'.
+2025-08-26 11:14:09,324 - INFO - send_MSG:147 - Email process completed successfully.
+2025-08-26 11:14:09,324 - INFO - send_MSG:151 - Script execution finished.
+2025-08-26 11:14:09,352 - INFO - system_utils:47 - Command 'python3' completed successfully.
+2025-08-26 11:14:09,352 - INFO - Bulletin:196 - send_MSG.py executed successfully.
+2025-08-26 11:14:09,352 - INFO - Bulletin:211 - Starting post-processing and cleanup operations.
+2025-08-26 11:14:09,352 - INFO - Bulletin:215 - Moving *.txt files to /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08.
+2025-08-26 11:14:09,353 - INFO - file_operations:98 - Moved '20250826.txt' to '/home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08'.
+2025-08-26 11:14:09,353 - INFO - file_operations:98 - Moved 'Synop20250826-06.txt' to '/home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08'.
+2025-08-26 11:14:09,354 - INFO - Bulletin:226 - Removing *.docx files from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 11:14:09,354 - INFO - Bulletin:237 - Creating backup directories: /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08 and /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 11:14:09,354 - INFO - Bulletin:241 - Backup directories created successfully.
+2025-08-26 11:14:09,354 - INFO - Bulletin:249 - Copying SMAL* data from /bqrm_data/observations/2025/08/26 to /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 11:14:09,354 - INFO - file_operations:339 - Attempting to copy directory from '/bqrm_data/observations/2025/08/26' to '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26'.
+2025-08-26 11:14:09,355 - INFO - file_operations:355 - Destination directory '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26' exists. Removing it before copying.
+2025-08-26 11:14:09,359 - INFO - file_operations:370 - Successfully copied directory from '/bqrm_data/observations/2025/08/26' to '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26'.
+2025-08-26 11:14:09,359 - INFO - Bulletin:257 - TAC data copy to backup successful.
+2025-08-26 11:14:09,360 - INFO - Bulletin:263 - Script finished.
+2025-08-26 11:14:09,360 - INFO - Bulletin:277 - Cleaned up PYTAPS_SHARED_LOG_FILE environment variable.
+2025-08-26 11:20:33,612 - INFO - Bulletin:62 - Script started: Bufr and Arpege Data Retrieval and Processing.
+2025-08-26 11:20:33,612 - INFO - Bulletin:64 - All logs will be written to: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:20:33,612 - INFO - Bulletin:69 - Set environment variable PYTAPS_SHARED_LOG_FILE to: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:20:33,612 - INFO - Bulletin:73 - Current Year (AA): 2025
+2025-08-26 11:20:33,612 - INFO - Bulletin:74 - Current Month (MM): 08
+2025-08-26 11:20:33,612 - INFO - Bulletin:75 - Current Day (DD): 26
+2025-08-26 11:20:33,613 - INFO - Bulletin:76 - Script Directory (SCRIPT_DIR): /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:20:33,613 - INFO - Bulletin:88 - BUFR Input Root: bufr_data/observations
+2025-08-26 11:20:33,613 - INFO - Bulletin:89 - TAC Input Root: bqrm_data/observations
+2025-08-26 11:20:33,613 - INFO - Bulletin:90 - FTP Server: 10.16.80.222
+2025-08-26 11:20:33,613 - INFO - Bulletin:91 - Local Directory for downloads: /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:20:33,613 - INFO - Bulletin:103 - Attempting to connect to FTP server 10.16.80.222 and download exported_data_2025-08-26.csv.
+2025-08-26 11:20:33,613 - INFO - fetchdata:171 - Starting FTP file fetching process for 1 files.
+2025-08-26 11:20:33,613 - INFO - fetchdata:17 - Attempting to connect to FTP server 10.16.80.222:21...
+2025-08-26 11:20:33,617 - INFO - fetchdata:20 - Successfully connected and logged in to 10.16.80.222.
+2025-08-26 11:20:33,617 - INFO - fetchdata:227 - Local file exported_data_2025-08-26.csv is missing. Downloading.
+2025-08-26 11:20:33,618 - INFO - fetchdata:230 - Downloading /exported_data_2025-08-26.csv to /home/aoumeur/BQRM_V01/BQCP24h/exported_data_2025-08-26.csv
+2025-08-26 11:20:33,623 - INFO - fetchdata:239 - Successfully downloaded exported_data_2025-08-26.csv
+2025-08-26 11:20:33,624 - INFO - fetchdata:257 - FTP client closed.
+2025-08-26 11:20:33,624 - INFO - fetchdata:261 - FTP file fetching process completed.
+2025-08-26 11:20:33,624 - INFO - Bulletin:128 - FTP download of exported_data_2025-08-26.csv successful.
+2025-08-26 11:20:33,624 - INFO - Bulletin:133 - Moved exported_data_2025-08-26.csv to /home/aoumeur/BQRM_V01/BQCP24h/Clim.
+2025-08-26 11:20:33,625 - INFO - Bulletin:152 - Attempting to copy BUFR Synop file from /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/26/Synop_202508260600.bufr to /home/aoumeur/BQRM_V01/BQCP24h/Synop.
+2025-08-26 11:20:33,625 - INFO - Bulletin:159 - BUFR Synop file copy successful.
+2025-08-26 11:20:33,625 - INFO - Bulletin:173 - Changed directory to /home/aoumeur/BQRM_V01/BQCP24h for Python script execution.
+2025-08-26 11:20:33,625 - INFO - Bulletin:179 - Both FTP download and BUFR file copy were successful. Proceeding with Python script execution.
+2025-08-26 11:20:33,625 - INFO - Bulletin:184 - Executing python3 csvtoxlsx.py...
+2025-08-26 11:20:33,626 - INFO - system_utils:36 - Executing command: python3 csvtoxlsx.py 2025 08 26 /home/aoumeur/BQRM_V01/BQCP24h in directory: '/home/aoumeur/BQRM_V01/BQCP24h'
+2025-08-26 11:20:34,026 - INFO - csvtoxlsx:54 - Shared log file path from environment: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:20:34,026 - INFO - csvtoxlsx:68 - Script csvtoxlsx.py started with args: Year=2025, Month=08, Day=26, LocalDir=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:20:34,029 - INFO - csvtoxlsx:74 - Successfully read CSV file: /home/aoumeur/BQRM_V01/BQCP24h/Clim/exported_data_2025-08-26.csv
+2025-08-26 11:20:34,033 - INFO - csvtoxlsx:95 - Data reshaped successfully.
+2025-08-26 11:20:34,044 - INFO - csvtoxlsx:119 - Data has been reshaped and saved to /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx/data_2025-08-26.xlsx
+2025-08-26 11:20:34,044 - INFO - csvtoxlsx:124 - Script csvtoxlsx.py finished.
+2025-08-26 11:20:34,105 - INFO - system_utils:47 - Command 'python3' completed successfully.
+2025-08-26 11:20:34,105 - INFO - Bulletin:196 - csvtoxlsx.py executed successfully.
+2025-08-26 11:20:34,106 - INFO - Bulletin:184 - Executing python3 Synop24h.py...
+2025-08-26 11:20:34,106 - INFO - system_utils:36 - Executing command: python3 Synop24h.py 2025 08 26 /home/aoumeur/BQRM_V01/BQCP24h in directory: '/home/aoumeur/BQRM_V01/BQCP24h'
+2025-08-26 11:20:34,646 - INFO - Synop24h:54 - Shared log file path from environment: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:20:34,646 - INFO - Synop24h:63 - Script Synop24h.py started with args: Year=2025, Month=08, Day=26, LocalDir=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:20:34,646 - INFO - Synop24h:77 - Constructed file paths:
+2025-08-26 11:20:34,646 - INFO - Synop24h:78 -   BUFR file: /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr
+2025-08-26 11:20:34,647 - INFO - Synop24h:79 -   24h Excel template: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul24.xlsx
+2025-08-26 11:20:34,647 - INFO - Synop24h:80 -   Agri Excel template: /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx
+2025-08-26 11:20:34,647 - INFO - Synop24h:81 -   Output 24h Excel: /home/aoumeur/BQRM_V01/BQCP24h/cumul24_08260600.xlsx
+2025-08-26 11:20:34,647 - INFO - Synop24h:82 -   Output Agri Excel: /home/aoumeur/BQRM_V01/BQCP24h/agricole_08260600.xlsx
+2025-08-26 11:20:34,647 - INFO - Synop24h:83 -   Word template: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul.docx
+2025-08-26 11:20:34,647 - INFO - Synop24h:84 -   Output Word: /home/aoumeur/BQRM_V01/BQCP24h/Cumul_table08260600.docx
+2025-08-26 11:20:34,647 - INFO - Synop24h:85 -   Station mapping file: /home/aoumeur/BQRM_V01/BQCP24h/ListStation.json
+2025-08-26 11:20:34,647 - INFO - Synop24h:86 -   Missing stations log: /home/aoumeur/BQRM_V01/BQCP24h/Synop20250826-06.txt
+2025-08-26 11:20:34,647 - INFO - Synop24h:87 -   Month translation file: /home/aoumeur/BQRM_V01/BQCP24h/month_translation.json
+2025-08-26 11:20:34,647 - INFO - Synop24h:102 - Attempting to load station mapping from /home/aoumeur/BQRM_V01/BQCP24h/ListStation.json...
+2025-08-26 11:20:34,647 - INFO - Synop24h:105 - Successfully loaded station mapping from /home/aoumeur/BQRM_V01/BQCP24h/ListStation.json. Found 68 stations.
+2025-08-26 11:20:34,647 - INFO - Synop24h:115 - Today's date: 2025-08-26
+2025-08-26 11:20:34,647 - INFO - Synop24h:122 - Cumulative precipitation will not be reset.
+2025-08-26 11:20:34,648 - INFO - data_utils:319 - Attempting to read BUFR file: /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr for columns: ['stationOrSiteName', 'totalPrecipitationOrTotalWaterEquivalent', 'timePeriod'] with kwargs: {}
+2025-08-26 11:20:34,787 - INFO - data_utils:328 - Successfully loaded BUFR data from /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr. DataFrame shape: (152, 3)
+2025-08-26 11:20:34,787 - INFO - Synop24h:143 - Columns renamed in DataFrame.
+2025-08-26 11:20:34,788 - INFO - Synop24h:147 - Filtered for 24-hour precipitation (Time == -24). Records found: 76
+2025-08-26 11:20:34,790 - INFO - Synop24h:155 - Selected 'SYNOP_STATION_NAME' and 'Précip (mm)' columns. Current DataFrame shape: (76, 2)
+2025-08-26 11:20:34,790 - INFO - Synop24h:159 - DataFrame sorted by 'SYNOP_STATION_NAME'.
+2025-08-26 11:20:34,790 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul24.xlsx
+2025-08-26 11:20:34,811 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul24.xlsx, active sheet: 'Feuille1'
+2025-08-26 11:20:34,811 - INFO - Synop24h:187 - Updating 24-hour precipitation Excel file with data.
+2025-08-26 11:20:34,813 - WARNING - Synop24h:208 - Row 3: Station 'Relizane' (RELIZANE) not found in BUFR data. Marked as missing.
+2025-08-26 11:20:34,816 - WARNING - Synop24h:208 - Row 6: Station 'Oran-Tafraoui' (ORAN-TAFARAOUI) not found in BUFR data. Marked as missing.
+2025-08-26 11:20:34,821 - WARNING - Synop24h:208 - Row 11: Station 'El-Kheiter' (EL-KHEITER) not found in BUFR data. Marked as missing.
+2025-08-26 11:20:34,822 - WARNING - Synop24h:208 - Row 12: Station 'Médéa' (MEDEA) not found in BUFR data. Marked as missing.
+2025-08-26 11:20:34,833 - WARNING - Synop24h:208 - Row 24: Station 'Ain-Safra' (AIN-SEFRA) not found in BUFR data. Marked as missing.
+2025-08-26 11:20:34,847 - INFO - Synop24h:224 - Updated 24-hour precipitation Excel file saved to /home/aoumeur/BQRM_V01/BQCP24h/cumul24_08260600.xlsx
+2025-08-26 11:20:34,847 - INFO - Synop24h:237 - Missing stations list saved to /home/aoumeur/BQRM_V01/BQCP24h/Synop20250826-06.txt. Total unique missing stations: 5
+2025-08-26 11:20:34,848 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx
+2025-08-26 11:20:34,867 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx, active sheet: 'Feuille1'
+2025-08-26 11:20:34,867 - INFO - Synop24h:271 - Updating cumulative precipitation Excel file with daily data.
+2025-08-26 11:20:34,869 - WARNING - Synop24h:297 - Row 3: Station 'Relizane' (RELIZANE) not found in BUFR data for cumulative update. Cumulative unchanged.
+2025-08-26 11:20:34,872 - WARNING - Synop24h:297 - Row 6: Station 'Oran-Tafraoui' (ORAN-TAFARAOUI) not found in BUFR data for cumulative update. Cumulative unchanged.
+2025-08-26 11:20:34,877 - WARNING - Synop24h:297 - Row 11: Station 'El-Kheiter' (EL-KHEITER) not found in BUFR data for cumulative update. Cumulative unchanged.
+2025-08-26 11:20:34,877 - WARNING - Synop24h:297 - Row 12: Station 'Médéa' (MEDEA) not found in BUFR data for cumulative update. Cumulative unchanged.
+2025-08-26 11:20:34,888 - WARNING - Synop24h:297 - Row 24: Station 'Ain-Safra' (AIN-SEFRA) not found in BUFR data for cumulative update. Cumulative unchanged.
+2025-08-26 11:20:34,902 - INFO - Synop24h:312 - Updated cumulative precipitation Excel file saved to /home/aoumeur/BQRM_V01/BQCP24h/agricole_08260600.xlsx
+2025-08-26 11:20:34,902 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/cumul24_08260600.xlsx
+2025-08-26 11:20:34,921 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/cumul24_08260600.xlsx, active sheet: 'Feuille1'
+2025-08-26 11:20:34,922 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/agricole_08260600.xlsx
+2025-08-26 11:20:34,941 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/agricole_08260600.xlsx, active sheet: 'Feuille1'
+2025-08-26 11:20:34,941 - INFO - Synop24h:347 - Loading Word template from /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul.docx...
+2025-08-26 11:20:34,951 - INFO - Synop24h:349 - Word template loaded successfully.
+2025-08-26 11:20:34,951 - INFO - Synop24h:373 - Attempting to load month translation from /home/aoumeur/BQRM_V01/BQCP24h/month_translation.json...
+2025-08-26 11:20:34,951 - INFO - Synop24h:376 - Successfully loaded month translation from /home/aoumeur/BQRM_V01/BQCP24h/month_translation.json.
+2025-08-26 11:20:34,951 - INFO - Synop24h:396 - Generated date line for 24h precip: 'Quantités de pluie enregistrée du 25 Août 2025 à 06h au 26 Août 2025 à 06h.'
+2025-08-26 11:20:34,951 - INFO - Synop24h:397 - Generated date line for cumulative precip: 'Cumuls de pluie enregistrés Validité : du 01 Septembre 2025 au 26 Août 2025'
+2025-08-26 11:20:34,952 - INFO - Synop24h:420 - Updated 24h precipitation date line in Word document.
+2025-08-26 11:20:34,953 - INFO - Synop24h:434 - Updated cumulative precipitation date line in Word document.
+2025-08-26 11:20:34,953 - INFO - Synop24h:439 - Populating 24-hour precipitation table (table 1) in Word document.
+2025-08-26 11:20:35,125 - WARNING - Synop24h:364 - Could not format value for Word: 'None'. Returning '/'.
+2025-08-26 11:20:35,138 - INFO - Synop24h:462 - Set font size for 24h precipitation table in Word.
+2025-08-26 11:20:35,138 - INFO - Synop24h:467 - Populating cumulative precipitation table (table 3) in Word document.
+2025-08-26 11:20:35,310 - WARNING - Synop24h:364 - Could not format value for Word: 'None'. Returning '/'.
+2025-08-26 11:20:35,323 - INFO - Synop24h:490 - Set font size for cumulative precipitation table in Word.
+2025-08-26 11:20:35,336 - INFO - Synop24h:497 - Combined Word document with 24-hour and cumulative precipitation saved as /home/aoumeur/BQRM_V01/BQCP24h/Cumul_table08260600.docx
+2025-08-26 11:20:35,336 - INFO - Synop24h:501 - Script Synop24h.py finished.
+2025-08-26 11:20:35,425 - INFO - system_utils:47 - Command 'python3' completed successfully.
+2025-08-26 11:20:35,425 - INFO - Bulletin:196 - Synop24h.py executed successfully.
+2025-08-26 11:20:35,425 - INFO - Bulletin:184 - Executing python3 SynoClim.py...
+2025-08-26 11:20:35,425 - INFO - system_utils:36 - Executing command: python3 SynoClim.py 2025 08 26 /home/aoumeur/BQRM_V01/BQCP24h in directory: '/home/aoumeur/BQRM_V01/BQCP24h'
+2025-08-26 11:20:35,972 - INFO - SynoClim:53 - Script SynoClim.py started with args: Year=2025, Month=08, Day=26, LocalDir=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:20:35,972 - INFO - SynoClim:66 - Configured file paths:
+2025-08-26 11:20:35,972 - INFO - SynoClim:67 -   BUFR file: /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr
+2025-08-26 11:20:35,972 - INFO - SynoClim:68 -   Excel template: /home/aoumeur/BQRM_V01/BQCP24h/templates/template.xlsx
+2025-08-26 11:20:35,973 - INFO - SynoClim:69 -   Output Excel: /home/aoumeur/BQRM_V01/BQCP24h/synop_precip_output2025260600.xlsx
+2025-08-26 11:20:35,973 - INFO - SynoClim:70 -   Word template: /home/aoumeur/BQRM_V01/BQCP24h/templates/doc_template.docx
+2025-08-26 11:20:35,973 - INFO - SynoClim:71 -   Output Word: /home/aoumeur/BQRM_V01/BQCP24h/SynopClim_precip_table08260600.docx
+2025-08-26 11:20:35,973 - INFO - SynoClim:72 -   Missing stations file: /home/aoumeur/BQRM_V01/BQCP24h/20250826.txt
+2025-08-26 11:20:35,973 - INFO - SynoClim:73 -   JSON mapping file: /home/aoumeur/BQRM_V01/BQCP24h/climaticstations.json
+2025-08-26 11:20:35,973 - INFO - SynoClim:74 -   Climatic Excel data: /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx/data_2025-08-26.xlsx
+2025-08-26 11:20:35,973 - INFO - SynoClim:75 -   Month translation JSON: /home/aoumeur/BQRM_V01/BQCP24h/month_translation.json
+2025-08-26 11:20:35,974 - INFO - SynoClim:86 - Attempting to read BUFR file: /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr
+2025-08-26 11:20:36,114 - INFO - SynoClim:91 - Successfully read BUFR file. Initial DataFrame shape: (152, 3)
+2025-08-26 11:20:36,118 - INFO - SynoClim:98 - Renaming DataFrame columns.
+2025-08-26 11:20:36,119 - INFO - SynoClim:105 - Filtering for 24-hour precipitation (Time == -24).
+2025-08-26 11:20:36,119 - INFO - SynoClim:107 - Filtered 24-hour precipitation DataFrame shape: (76, 3)
+2025-08-26 11:20:36,123 - INFO - SynoClim:111 - Dropping rows with missing station names.
+2025-08-26 11:20:36,124 - INFO - SynoClim:114 - Dropped 0 rows with missing station names. New shape: (76, 3)
+2025-08-26 11:20:36,125 - INFO - SynoClim:121 - Attempting to load Excel template: /home/aoumeur/BQRM_V01/BQCP24h/templates/template.xlsx
+2025-08-26 11:20:36,125 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/template.xlsx
+2025-08-26 11:20:36,207 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/template.xlsx, active sheet: 'Feuille1'
+2025-08-26 11:20:36,207 - INFO - SynoClim:123 - Successfully loaded Excel template.
+2025-08-26 11:20:36,208 - INFO - SynoClim:138 - Attempting to load JSON mapping file: /home/aoumeur/BQRM_V01/BQCP24h/climaticstations.json
+2025-08-26 11:20:36,208 - INFO - SynoClim:141 - Successfully loaded JSON mapping. 49 entries found.
+2025-08-26 11:20:36,208 - INFO - SynoClim:166 - Additional Excel file found: /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx/data_2025-08-26.xlsx. Attempting to load.
+2025-08-26 11:20:36,220 - INFO - SynoClim:171 - Successfully loaded additional Excel file. Columns: ['Station', 'Precipitation']
+2025-08-26 11:20:36,223 - INFO - SynoClim:199 - Starting to loop through Excel template rows to populate precipitation values.
+2025-08-26 11:20:36,225 - INFO - SynoClim:229 -   Station 'MATRIOUNE' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,226 - INFO - SynoClim:229 -   Station 'AOULEF' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,227 - INFO - SynoClim:229 -   Station 'REGGANE' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,235 - INFO - SynoClim:258 -   Station 'REGHAIA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,236 - INFO - SynoClim:258 -   Station 'BORDJ-EL-BAHRI' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,237 - INFO - SynoClim:229 -   Station 'SOUK OUFELLA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,237 - INFO - SynoClim:258 -   Station 'EL-HARRACH' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,238 - INFO - SynoClim:258 -   Station 'BARAKI' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,240 - INFO - SynoClim:258 -   Station 'KOUBA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,241 - INFO - SynoClim:258 -   Station 'OUED KORICH' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,242 - INFO - SynoClim:258 -   Station 'BOUZAREAH' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,243 - INFO - SynoClim:258 -   Station 'AIN-BENIAN' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,244 - INFO - SynoClim:258 -   Station 'MAHALMA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,248 - INFO - SynoClim:229 -   Station 'TIKDJDA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,251 - INFO - SynoClim:229 -   Station 'ABDENNIZI' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,252 - INFO - SynoClim:229 -   Station 'TIRIRINE' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,254 - INFO - SynoClim:229 -   Station 'AMGUID' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,255 - INFO - SynoClim:229 -   Station 'MERTOUTEK' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,257 - INFO - SynoClim:229 -   Station 'MOULAY-LAHCEN' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,258 - INFO - SynoClim:229 -   Station 'ARAK' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,258 - INFO - SynoClim:258 -   Station 'SKIKDA PORT' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,264 - INFO - SynoClim:229 -   Station 'IN AZAOUA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,264 - INFO - SynoClim:258 -   Station 'BOUCHEGOUF' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,268 - INFO - SynoClim:229 -   Station 'MEDEA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,271 - INFO - SynoClim:258 -   Station 'AIN-SEFRA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,276 - INFO - SynoClim:258 -   Station 'TALMINE' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,278 - INFO - SynoClim:258 -   Station 'BIDON-5' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,278 - INFO - SynoClim:229 -   Station 'ORAN-TAFARAOUI' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,280 - INFO - SynoClim:258 -   Station 'OUALLEN' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,280 - INFO - SynoClim:229 -   Station 'EL KHEITER' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,281 - INFO - SynoClim:258 -   Station 'OULED DJELLAL' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,283 - INFO - SynoClim:258 -   Station 'TABELBALA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,284 - INFO - SynoClim:258 -   Station 'TAGUENTOUR' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,287 - INFO - SynoClim:258 -   Station 'ANESBARAKA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,288 - INFO - SynoClim:229 -   Station 'EL-KALA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,289 - INFO - SynoClim:258 -   Station 'IN ATEI' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,292 - INFO - SynoClim:258 -   Station 'TINALKOUN' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,293 - INFO - SynoClim:258 -   Station 'BORDJ-HAOUS' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,294 - INFO - SynoClim:258 -   Station 'OUED ARIKINE' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,295 - INFO - SynoClim:258 -   Station 'EL M’GHAIR' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,297 - INFO - SynoClim:229 -   Station 'CHERCHELL' not found in any data source. Marked as missing ('/').
+2025-08-26 11:20:36,298 - INFO - SynoClim:266 - Finished populating Excel template. Total missing stations identified: 41
+2025-08-26 11:20:36,298 - INFO - SynoClim:271 - Attempting to save updated Excel file to: /home/aoumeur/BQRM_V01/BQCP24h/synop_precip_output2025260600.xlsx
+2025-08-26 11:20:36,321 - INFO - SynoClim:273 - Precipitation values successfully inserted into /home/aoumeur/BQRM_V01/BQCP24h/synop_precip_output2025260600.xlsx
+2025-08-26 11:20:36,321 - INFO - SynoClim:279 - Attempting to save missing stations list to: /home/aoumeur/BQRM_V01/BQCP24h/20250826.txt
+2025-08-26 11:20:36,321 - INFO - SynoClim:285 - Missing stations saved in /home/aoumeur/BQRM_V01/BQCP24h/20250826.txt
+2025-08-26 11:20:36,322 - INFO - SynoClim:295 - Attempting to load Word template: /home/aoumeur/BQRM_V01/BQCP24h/templates/doc_template.docx
+2025-08-26 11:20:36,333 - INFO - SynoClim:297 - Successfully loaded Word template.
+2025-08-26 11:20:36,334 - INFO - SynoClim:308 - Attempting to load month_translation.json from /home/aoumeur/BQRM_V01/BQCP24h/month_translation.json.
+2025-08-26 11:20:36,334 - INFO - SynoClim:311 - Successfully loaded month translation JSON.
+2025-08-26 11:20:36,334 - INFO - SynoClim:333 - Generated date line for Word document: 'Quantités de pluie enregistrée du 25 Août 2025 à 06h au 26 Août 2025 à 06h.'
+2025-08-26 11:20:36,334 - INFO - SynoClim:337 - Attempting to update the first table (date line) in the Word document.
+2025-08-26 11:20:36,335 - INFO - SynoClim:359 - Attempting to populate the second table (precipitation data) in the Word document.
+2025-08-26 11:20:37,649 - INFO - SynoClim:389 - Finished populating Word document table.
+2025-08-26 11:20:37,649 - INFO - SynoClim:392 - Attempting to save filled Word document to: /home/aoumeur/BQRM_V01/BQCP24h/SynopClim_precip_table08260600.docx
+2025-08-26 11:20:37,660 - INFO - SynoClim:394 - Precipitation values successfully inserted and formatted in /home/aoumeur/BQRM_V01/BQCP24h/SynopClim_precip_table08260600.docx
+2025-08-26 11:20:37,660 - INFO - SynoClim:401 - Script SynoClim.py finished.
+2025-08-26 11:20:37,751 - INFO - system_utils:47 - Command 'python3' completed successfully.
+2025-08-26 11:20:37,751 - INFO - Bulletin:196 - SynoClim.py executed successfully.
+2025-08-26 11:20:37,751 - INFO - Bulletin:184 - Executing python3 send_MSG.py...
+2025-08-26 11:20:37,751 - INFO - system_utils:36 - Executing command: python3 send_MSG.py 2025 08 26 /home/aoumeur/BQRM_V01/BQCP24h in directory: '/home/aoumeur/BQRM_V01/BQCP24h'
+2025-08-26 11:20:37,815 - INFO - send_MSG:85 - Shared log file path from environment: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:20:37,815 - INFO - send_MSG:86 - Logger initialized for send_MSG. Log file: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:20:37,815 - INFO - send_MSG:87 - Starting daily weather bulletin sending script.
+2025-08-26 11:20:37,815 - INFO - date_time_utils:56 - Processed dates - Today: 2025-08-26, Yesterday: 2025-08-25
+2025-08-26 11:20:37,815 - INFO - send_MSG:114 - File found and added for attachment: /home/aoumeur/BQRM_V01/BQCP24h/Cumul_table08260600.docx
+2025-08-26 11:20:37,816 - INFO - send_MSG:114 - File found and added for attachment: /home/aoumeur/BQRM_V01/BQCP24h/SynopClim_precip_table08260600.docx
+2025-08-26 11:20:37,816 - INFO - send_MSG:131 - Attempting to send email with subject: 'Bulletin du 26/08/2025' to aoumeurmohamed2404@gmail.com
+2025-08-26 11:20:37,816 - INFO - email_utils:30 - Attempting to send email from 'pnt@meteo.dz' to ['aoumeurmohamed2404@gmail.com'] with subject: 'Bulletin du 26/08/2025'
+2025-08-26 11:20:38,034 - INFO - email_utils:71 - Email successfully sent to 'aoumeurmohamed2404@gmail.com'.
+2025-08-26 11:20:38,036 - INFO - send_MSG:147 - Email process completed successfully.
+2025-08-26 11:20:38,037 - INFO - send_MSG:151 - Script execution finished.
+2025-08-26 11:20:38,062 - INFO - system_utils:47 - Command 'python3' completed successfully.
+2025-08-26 11:20:38,062 - INFO - Bulletin:196 - send_MSG.py executed successfully.
+2025-08-26 11:20:38,062 - INFO - Bulletin:211 - Starting post-processing and cleanup operations.
+2025-08-26 11:20:38,062 - INFO - Bulletin:215 - Moving *.txt files to /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08.
+2025-08-26 11:20:38,063 - INFO - file_operations:98 - Moved '20250826.txt' to '/home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08'.
+2025-08-26 11:20:38,063 - INFO - file_operations:98 - Moved 'Synop20250826-06.txt' to '/home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08'.
+2025-08-26 11:20:38,064 - INFO - Bulletin:226 - Removing *.docx files from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 11:20:38,064 - INFO - Bulletin:237 - Creating backup directories: /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08 and /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 11:20:38,064 - INFO - Bulletin:241 - Backup directories created successfully.
+2025-08-26 11:20:38,064 - INFO - Bulletin:249 - Copying SMAL* data from /bqrm_data/observations/2025/08/26 to /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 11:20:38,064 - INFO - file_operations:339 - Attempting to copy directory from '/bqrm_data/observations/2025/08/26' to '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26'.
+2025-08-26 11:20:38,065 - INFO - file_operations:355 - Destination directory '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26' exists. Removing it before copying.
+2025-08-26 11:20:38,069 - INFO - file_operations:370 - Successfully copied directory from '/bqrm_data/observations/2025/08/26' to '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26'.
+2025-08-26 11:20:38,069 - INFO - Bulletin:257 - TAC data copy to backup successful.
+2025-08-26 11:20:38,069 - INFO - Bulletin:263 - Script finished.
+2025-08-26 11:20:38,069 - INFO - Bulletin:277 - Cleaned up PYTAPS_SHARED_LOG_FILE environment variable.
+2025-08-26 11:21:45,861 - INFO - Bulletin:62 - Script started: Bufr and Arpege Data Retrieval and Processing.
+2025-08-26 11:21:45,861 - INFO - Bulletin:64 - All logs will be written to: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:21:45,861 - INFO - Bulletin:69 - Set environment variable PYTAPS_SHARED_LOG_FILE to: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:21:45,861 - INFO - Bulletin:73 - Current Year (AA): 2025
+2025-08-26 11:21:45,861 - INFO - Bulletin:74 - Current Month (MM): 08
+2025-08-26 11:21:45,861 - INFO - Bulletin:75 - Current Day (DD): 26
+2025-08-26 11:21:45,861 - INFO - Bulletin:76 - Script Directory (SCRIPT_DIR): /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:21:45,861 - INFO - Bulletin:88 - BUFR Input Root: bufr_data/observations
+2025-08-26 11:21:45,861 - INFO - Bulletin:89 - TAC Input Root: bqrm_data/observations
+2025-08-26 11:21:45,861 - INFO - Bulletin:90 - FTP Server: 10.16.80.222
+2025-08-26 11:21:45,861 - INFO - Bulletin:91 - Local Directory for downloads: /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:21:45,861 - INFO - Bulletin:103 - Attempting to connect to FTP server 10.16.80.222 and download exported_data_2025-08-26.csv.
+2025-08-26 11:21:45,862 - INFO - fetchdata:171 - Starting FTP file fetching process for 1 files.
+2025-08-26 11:21:45,862 - INFO - fetchdata:17 - Attempting to connect to FTP server 10.16.80.222:21...
+2025-08-26 11:21:45,866 - INFO - fetchdata:20 - Successfully connected and logged in to 10.16.80.222.
+2025-08-26 11:21:45,866 - INFO - fetchdata:227 - Local file exported_data_2025-08-26.csv is missing. Downloading.
+2025-08-26 11:21:45,866 - INFO - fetchdata:230 - Downloading /exported_data_2025-08-26.csv to /home/aoumeur/BQRM_V01/BQCP24h/exported_data_2025-08-26.csv
+2025-08-26 11:21:45,872 - INFO - fetchdata:239 - Successfully downloaded exported_data_2025-08-26.csv
+2025-08-26 11:21:45,872 - INFO - fetchdata:257 - FTP client closed.
+2025-08-26 11:21:45,872 - INFO - fetchdata:261 - FTP file fetching process completed.
+2025-08-26 11:21:45,873 - INFO - Bulletin:128 - FTP download of exported_data_2025-08-26.csv successful.
+2025-08-26 11:21:45,873 - INFO - Bulletin:133 - Moved exported_data_2025-08-26.csv to /home/aoumeur/BQRM_V01/BQCP24h/Clim.
+2025-08-26 11:21:45,873 - INFO - Bulletin:152 - Attempting to copy BUFR Synop file from /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/26/Synop_202508260600.bufr to /home/aoumeur/BQRM_V01/BQCP24h/Synop.
+2025-08-26 11:21:45,873 - INFO - Bulletin:159 - BUFR Synop file copy successful.
+2025-08-26 11:21:45,873 - INFO - Bulletin:173 - Changed directory to /home/aoumeur/BQRM_V01/BQCP24h for Python script execution.
+2025-08-26 11:21:45,874 - INFO - Bulletin:179 - Both FTP download and BUFR file copy were successful. Proceeding with Python script execution.
+2025-08-26 11:21:45,874 - INFO - Bulletin:184 - Executing python3 csvtoxlsx.py...
+2025-08-26 11:21:45,874 - INFO - system_utils:36 - Executing command: python3 csvtoxlsx.py 2025 08 26 /home/aoumeur/BQRM_V01/BQCP24h in directory: '/home/aoumeur/BQRM_V01/BQCP24h'
+2025-08-26 11:21:46,275 - INFO - csvtoxlsx:54 - Shared log file path from environment: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:21:46,275 - INFO - csvtoxlsx:68 - Script csvtoxlsx.py started with args: Year=2025, Month=08, Day=26, LocalDir=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:21:46,278 - INFO - csvtoxlsx:74 - Successfully read CSV file: /home/aoumeur/BQRM_V01/BQCP24h/Clim/exported_data_2025-08-26.csv
+2025-08-26 11:21:46,282 - INFO - csvtoxlsx:95 - Data reshaped successfully.
+2025-08-26 11:21:46,293 - INFO - csvtoxlsx:119 - Data has been reshaped and saved to /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx/data_2025-08-26.xlsx
+2025-08-26 11:21:46,293 - INFO - csvtoxlsx:124 - Script csvtoxlsx.py finished.
+2025-08-26 11:21:46,354 - INFO - system_utils:47 - Command 'python3' completed successfully.
+2025-08-26 11:21:46,354 - INFO - Bulletin:196 - csvtoxlsx.py executed successfully.
+2025-08-26 11:21:46,354 - INFO - Bulletin:184 - Executing python3 Synop24h.py...
+2025-08-26 11:21:46,354 - INFO - system_utils:36 - Executing command: python3 Synop24h.py 2025 08 26 /home/aoumeur/BQRM_V01/BQCP24h in directory: '/home/aoumeur/BQRM_V01/BQCP24h'
+2025-08-26 11:21:46,894 - INFO - Synop24h:54 - Shared log file path from environment: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:21:46,894 - INFO - Synop24h:63 - Script Synop24h.py started with args: Year=2025, Month=08, Day=26, LocalDir=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:21:46,894 - INFO - Synop24h:77 - Constructed file paths:
+2025-08-26 11:21:46,895 - INFO - Synop24h:78 -   BUFR file: /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr
+2025-08-26 11:21:46,895 - INFO - Synop24h:79 -   24h Excel template: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul24.xlsx
+2025-08-26 11:21:46,895 - INFO - Synop24h:80 -   Agri Excel template: /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx
+2025-08-26 11:21:46,895 - INFO - Synop24h:81 -   Output 24h Excel: /home/aoumeur/BQRM_V01/BQCP24h/cumul24_08260600.xlsx
+2025-08-26 11:21:46,895 - INFO - Synop24h:82 -   Output Agri Excel: /home/aoumeur/BQRM_V01/BQCP24h/agricole_08260600.xlsx
+2025-08-26 11:21:46,895 - INFO - Synop24h:83 -   Word template: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul.docx
+2025-08-26 11:21:46,895 - INFO - Synop24h:84 -   Output Word: /home/aoumeur/BQRM_V01/BQCP24h/Cumul_table08260600.docx
+2025-08-26 11:21:46,895 - INFO - Synop24h:85 -   Station mapping file: /home/aoumeur/BQRM_V01/BQCP24h/ListStation.json
+2025-08-26 11:21:46,895 - INFO - Synop24h:86 -   Missing stations log: /home/aoumeur/BQRM_V01/BQCP24h/Synop20250826-06.txt
+2025-08-26 11:21:46,895 - INFO - Synop24h:87 -   Month translation file: /home/aoumeur/BQRM_V01/BQCP24h/month_translation.json
+2025-08-26 11:21:46,895 - INFO - Synop24h:102 - Attempting to load station mapping from /home/aoumeur/BQRM_V01/BQCP24h/ListStation.json...
+2025-08-26 11:21:46,895 - INFO - Synop24h:105 - Successfully loaded station mapping from /home/aoumeur/BQRM_V01/BQCP24h/ListStation.json. Found 68 stations.
+2025-08-26 11:21:46,895 - INFO - Synop24h:115 - Today's date: 2025-08-26
+2025-08-26 11:21:46,895 - INFO - Synop24h:122 - Cumulative precipitation will not be reset.
+2025-08-26 11:21:46,896 - INFO - data_utils:319 - Attempting to read BUFR file: /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr for columns: ['stationOrSiteName', 'totalPrecipitationOrTotalWaterEquivalent', 'timePeriod'] with kwargs: {}
+2025-08-26 11:21:47,034 - INFO - data_utils:328 - Successfully loaded BUFR data from /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr. DataFrame shape: (152, 3)
+2025-08-26 11:21:47,035 - INFO - Synop24h:143 - Columns renamed in DataFrame.
+2025-08-26 11:21:47,036 - INFO - Synop24h:147 - Filtered for 24-hour precipitation (Time == -24). Records found: 76
+2025-08-26 11:21:47,037 - INFO - Synop24h:155 - Selected 'SYNOP_STATION_NAME' and 'Précip (mm)' columns. Current DataFrame shape: (76, 2)
+2025-08-26 11:21:47,037 - INFO - Synop24h:159 - DataFrame sorted by 'SYNOP_STATION_NAME'.
+2025-08-26 11:21:47,038 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul24.xlsx
+2025-08-26 11:21:47,058 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul24.xlsx, active sheet: 'Feuille1'
+2025-08-26 11:21:47,058 - INFO - Synop24h:187 - Updating 24-hour precipitation Excel file with data.
+2025-08-26 11:21:47,060 - WARNING - Synop24h:208 - Row 3: Station 'Relizane' (RELIZANE) not found in BUFR data. Marked as missing.
+2025-08-26 11:21:47,063 - WARNING - Synop24h:208 - Row 6: Station 'Oran-Tafraoui' (ORAN-TAFARAOUI) not found in BUFR data. Marked as missing.
+2025-08-26 11:21:47,068 - WARNING - Synop24h:208 - Row 11: Station 'El-Kheiter' (EL-KHEITER) not found in BUFR data. Marked as missing.
+2025-08-26 11:21:47,068 - WARNING - Synop24h:208 - Row 12: Station 'Médéa' (MEDEA) not found in BUFR data. Marked as missing.
+2025-08-26 11:21:47,079 - WARNING - Synop24h:208 - Row 24: Station 'Ain-Safra' (AIN-SEFRA) not found in BUFR data. Marked as missing.
+2025-08-26 11:21:47,094 - INFO - Synop24h:224 - Updated 24-hour precipitation Excel file saved to /home/aoumeur/BQRM_V01/BQCP24h/cumul24_08260600.xlsx
+2025-08-26 11:21:47,094 - INFO - Synop24h:237 - Missing stations list saved to /home/aoumeur/BQRM_V01/BQCP24h/Synop20250826-06.txt. Total unique missing stations: 5
+2025-08-26 11:21:47,094 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx
+2025-08-26 11:21:47,113 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx, active sheet: 'Feuille1'
+2025-08-26 11:21:47,114 - INFO - Synop24h:271 - Updating cumulative precipitation Excel file with daily data.
+2025-08-26 11:21:47,115 - WARNING - Synop24h:297 - Row 3: Station 'Relizane' (RELIZANE) not found in BUFR data for cumulative update. Cumulative unchanged.
+2025-08-26 11:21:47,118 - WARNING - Synop24h:297 - Row 6: Station 'Oran-Tafraoui' (ORAN-TAFARAOUI) not found in BUFR data for cumulative update. Cumulative unchanged.
+2025-08-26 11:21:47,123 - WARNING - Synop24h:297 - Row 11: Station 'El-Kheiter' (EL-KHEITER) not found in BUFR data for cumulative update. Cumulative unchanged.
+2025-08-26 11:21:47,124 - WARNING - Synop24h:297 - Row 12: Station 'Médéa' (MEDEA) not found in BUFR data for cumulative update. Cumulative unchanged.
+2025-08-26 11:21:47,134 - WARNING - Synop24h:297 - Row 24: Station 'Ain-Safra' (AIN-SEFRA) not found in BUFR data for cumulative update. Cumulative unchanged.
+2025-08-26 11:21:47,149 - INFO - Synop24h:312 - Updated cumulative precipitation Excel file saved to /home/aoumeur/BQRM_V01/BQCP24h/agricole_08260600.xlsx
+2025-08-26 11:21:47,149 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/cumul24_08260600.xlsx
+2025-08-26 11:21:47,168 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/cumul24_08260600.xlsx, active sheet: 'Feuille1'
+2025-08-26 11:21:47,169 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/agricole_08260600.xlsx
+2025-08-26 11:21:47,188 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/agricole_08260600.xlsx, active sheet: 'Feuille1'
+2025-08-26 11:21:47,188 - INFO - Synop24h:347 - Loading Word template from /home/aoumeur/BQRM_V01/BQCP24h/templates/cumul.docx...
+2025-08-26 11:21:47,198 - INFO - Synop24h:349 - Word template loaded successfully.
+2025-08-26 11:21:47,198 - INFO - Synop24h:373 - Attempting to load month translation from /home/aoumeur/BQRM_V01/BQCP24h/month_translation.json...
+2025-08-26 11:21:47,198 - INFO - Synop24h:376 - Successfully loaded month translation from /home/aoumeur/BQRM_V01/BQCP24h/month_translation.json.
+2025-08-26 11:21:47,198 - INFO - Synop24h:396 - Generated date line for 24h precip: 'Quantités de pluie enregistrée du 25 Août 2025 à 06h au 26 Août 2025 à 06h.'
+2025-08-26 11:21:47,198 - INFO - Synop24h:397 - Generated date line for cumulative precip: 'Cumuls de pluie enregistrés Validité : du 01 Septembre 2025 au 26 Août 2025'
+2025-08-26 11:21:47,199 - INFO - Synop24h:420 - Updated 24h precipitation date line in Word document.
+2025-08-26 11:21:47,200 - INFO - Synop24h:434 - Updated cumulative precipitation date line in Word document.
+2025-08-26 11:21:47,200 - INFO - Synop24h:439 - Populating 24-hour precipitation table (table 1) in Word document.
+2025-08-26 11:21:47,373 - WARNING - Synop24h:364 - Could not format value for Word: 'None'. Returning '/'.
+2025-08-26 11:21:47,386 - INFO - Synop24h:462 - Set font size for 24h precipitation table in Word.
+2025-08-26 11:21:47,386 - INFO - Synop24h:467 - Populating cumulative precipitation table (table 3) in Word document.
+2025-08-26 11:21:47,556 - WARNING - Synop24h:364 - Could not format value for Word: 'None'. Returning '/'.
+2025-08-26 11:21:47,569 - INFO - Synop24h:490 - Set font size for cumulative precipitation table in Word.
+2025-08-26 11:21:47,582 - INFO - Synop24h:497 - Combined Word document with 24-hour and cumulative precipitation saved as /home/aoumeur/BQRM_V01/BQCP24h/Cumul_table08260600.docx
+2025-08-26 11:21:47,582 - INFO - Synop24h:501 - Script Synop24h.py finished.
+2025-08-26 11:21:47,671 - INFO - system_utils:47 - Command 'python3' completed successfully.
+2025-08-26 11:21:47,671 - INFO - Bulletin:196 - Synop24h.py executed successfully.
+2025-08-26 11:21:47,671 - INFO - Bulletin:184 - Executing python3 SynoClim.py...
+2025-08-26 11:21:47,672 - INFO - system_utils:36 - Executing command: python3 SynoClim.py 2025 08 26 /home/aoumeur/BQRM_V01/BQCP24h in directory: '/home/aoumeur/BQRM_V01/BQCP24h'
+2025-08-26 11:21:48,213 - INFO - SynoClim:53 - Script SynoClim.py started with args: Year=2025, Month=08, Day=26, LocalDir=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 11:21:48,214 - INFO - SynoClim:66 - Configured file paths:
+2025-08-26 11:21:48,214 - INFO - SynoClim:67 -   BUFR file: /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr
+2025-08-26 11:21:48,214 - INFO - SynoClim:68 -   Excel template: /home/aoumeur/BQRM_V01/BQCP24h/templates/template.xlsx
+2025-08-26 11:21:48,214 - INFO - SynoClim:69 -   Output Excel: /home/aoumeur/BQRM_V01/BQCP24h/synop_precip_output2025260600.xlsx
+2025-08-26 11:21:48,214 - INFO - SynoClim:70 -   Word template: /home/aoumeur/BQRM_V01/BQCP24h/templates/doc_template.docx
+2025-08-26 11:21:48,214 - INFO - SynoClim:71 -   Output Word: /home/aoumeur/BQRM_V01/BQCP24h/SynopClim_precip_table08260600.docx
+2025-08-26 11:21:48,214 - INFO - SynoClim:72 -   Missing stations file: /home/aoumeur/BQRM_V01/BQCP24h/20250826.txt
+2025-08-26 11:21:48,214 - INFO - SynoClim:73 -   JSON mapping file: /home/aoumeur/BQRM_V01/BQCP24h/climaticstations.json
+2025-08-26 11:21:48,214 - INFO - SynoClim:74 -   Climatic Excel data: /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx/data_2025-08-26.xlsx
+2025-08-26 11:21:48,214 - INFO - SynoClim:75 -   Month translation JSON: /home/aoumeur/BQRM_V01/BQCP24h/month_translation.json
+2025-08-26 11:21:48,215 - INFO - SynoClim:86 - Attempting to read BUFR file: /home/aoumeur/BQRM_V01/BQCP24h/Synop/Synop_202508260600.bufr
+2025-08-26 11:21:48,355 - INFO - SynoClim:91 - Successfully read BUFR file. Initial DataFrame shape: (152, 3)
+2025-08-26 11:21:48,359 - INFO - SynoClim:98 - Renaming DataFrame columns.
+2025-08-26 11:21:48,360 - INFO - SynoClim:105 - Filtering for 24-hour precipitation (Time == -24).
+2025-08-26 11:21:48,360 - INFO - SynoClim:107 - Filtered 24-hour precipitation DataFrame shape: (76, 3)
+2025-08-26 11:21:48,364 - INFO - SynoClim:111 - Dropping rows with missing station names.
+2025-08-26 11:21:48,365 - INFO - SynoClim:114 - Dropped 0 rows with missing station names. New shape: (76, 3)
+2025-08-26 11:21:48,366 - INFO - SynoClim:121 - Attempting to load Excel template: /home/aoumeur/BQRM_V01/BQCP24h/templates/template.xlsx
+2025-08-26 11:21:48,366 - INFO - data_utils:281 - Attempting to load Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/template.xlsx
+2025-08-26 11:21:48,447 - INFO - data_utils:284 - Successfully loaded Excel workbook: /home/aoumeur/BQRM_V01/BQCP24h/templates/template.xlsx, active sheet: 'Feuille1'
+2025-08-26 11:21:48,448 - INFO - SynoClim:123 - Successfully loaded Excel template.
+2025-08-26 11:21:48,448 - INFO - SynoClim:138 - Attempting to load JSON mapping file: /home/aoumeur/BQRM_V01/BQCP24h/climaticstations.json
+2025-08-26 11:21:48,448 - INFO - SynoClim:141 - Successfully loaded JSON mapping. 49 entries found.
+2025-08-26 11:21:48,449 - INFO - SynoClim:166 - Additional Excel file found: /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx/data_2025-08-26.xlsx. Attempting to load.
+2025-08-26 11:21:48,461 - INFO - SynoClim:171 - Successfully loaded additional Excel file. Columns: ['Station', 'Precipitation']
+2025-08-26 11:21:48,464 - INFO - SynoClim:199 - Starting to loop through Excel template rows to populate precipitation values.
+2025-08-26 11:21:48,466 - INFO - SynoClim:229 -   Station 'MATRIOUNE' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,466 - INFO - SynoClim:229 -   Station 'AOULEF' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,467 - INFO - SynoClim:229 -   Station 'REGGANE' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,476 - INFO - SynoClim:258 -   Station 'REGHAIA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,477 - INFO - SynoClim:258 -   Station 'BORDJ-EL-BAHRI' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,478 - INFO - SynoClim:229 -   Station 'SOUK OUFELLA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,478 - INFO - SynoClim:258 -   Station 'EL-HARRACH' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,479 - INFO - SynoClim:258 -   Station 'BARAKI' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,481 - INFO - SynoClim:258 -   Station 'KOUBA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,482 - INFO - SynoClim:258 -   Station 'OUED KORICH' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,483 - INFO - SynoClim:258 -   Station 'BOUZAREAH' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,484 - INFO - SynoClim:258 -   Station 'AIN-BENIAN' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,485 - INFO - SynoClim:258 -   Station 'MAHALMA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,489 - INFO - SynoClim:229 -   Station 'TIKDJDA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,492 - INFO - SynoClim:229 -   Station 'ABDENNIZI' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,493 - INFO - SynoClim:229 -   Station 'TIRIRINE' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,495 - INFO - SynoClim:229 -   Station 'AMGUID' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,496 - INFO - SynoClim:229 -   Station 'MERTOUTEK' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,498 - INFO - SynoClim:229 -   Station 'MOULAY-LAHCEN' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,499 - INFO - SynoClim:229 -   Station 'ARAK' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,499 - INFO - SynoClim:258 -   Station 'SKIKDA PORT' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,505 - INFO - SynoClim:229 -   Station 'IN AZAOUA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,506 - INFO - SynoClim:258 -   Station 'BOUCHEGOUF' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,509 - INFO - SynoClim:229 -   Station 'MEDEA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,513 - INFO - SynoClim:258 -   Station 'AIN-SEFRA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,518 - INFO - SynoClim:258 -   Station 'TALMINE' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,519 - INFO - SynoClim:258 -   Station 'BIDON-5' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,520 - INFO - SynoClim:229 -   Station 'ORAN-TAFARAOUI' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,521 - INFO - SynoClim:258 -   Station 'OUALLEN' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,522 - INFO - SynoClim:229 -   Station 'EL KHEITER' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,523 - INFO - SynoClim:258 -   Station 'OULED DJELLAL' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,524 - INFO - SynoClim:258 -   Station 'TABELBALA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,526 - INFO - SynoClim:258 -   Station 'TAGUENTOUR' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,529 - INFO - SynoClim:258 -   Station 'ANESBARAKA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,530 - INFO - SynoClim:229 -   Station 'EL-KALA' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,531 - INFO - SynoClim:258 -   Station 'IN ATEI' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,533 - INFO - SynoClim:258 -   Station 'TINALKOUN' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,534 - INFO - SynoClim:258 -   Station 'BORDJ-HAOUS' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,535 - INFO - SynoClim:258 -   Station 'OUED ARIKINE' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,537 - INFO - SynoClim:258 -   Station 'EL M’GHAIR' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,539 - INFO - SynoClim:229 -   Station 'CHERCHELL' not found in any data source. Marked as missing ('/').
+2025-08-26 11:21:48,540 - INFO - SynoClim:266 - Finished populating Excel template. Total missing stations identified: 41
+2025-08-26 11:21:48,540 - INFO - SynoClim:271 - Attempting to save updated Excel file to: /home/aoumeur/BQRM_V01/BQCP24h/synop_precip_output2025260600.xlsx
+2025-08-26 11:21:48,581 - INFO - SynoClim:273 - Precipitation values successfully inserted into /home/aoumeur/BQRM_V01/BQCP24h/synop_precip_output2025260600.xlsx
+2025-08-26 11:21:48,581 - INFO - SynoClim:279 - Attempting to save missing stations list to: /home/aoumeur/BQRM_V01/BQCP24h/20250826.txt
+2025-08-26 11:21:48,581 - INFO - SynoClim:285 - Missing stations saved in /home/aoumeur/BQRM_V01/BQCP24h/20250826.txt
+2025-08-26 11:21:48,582 - INFO - SynoClim:295 - Attempting to load Word template: /home/aoumeur/BQRM_V01/BQCP24h/templates/doc_template.docx
+2025-08-26 11:21:48,594 - INFO - SynoClim:297 - Successfully loaded Word template.
+2025-08-26 11:21:48,594 - INFO - SynoClim:308 - Attempting to load month_translation.json from /home/aoumeur/BQRM_V01/BQCP24h/month_translation.json.
+2025-08-26 11:21:48,594 - INFO - SynoClim:311 - Successfully loaded month translation JSON.
+2025-08-26 11:21:48,594 - INFO - SynoClim:333 - Generated date line for Word document: 'Quantités de pluie enregistrée du 25 Août 2025 à 06h au 26 Août 2025 à 06h.'
+2025-08-26 11:21:48,595 - INFO - SynoClim:337 - Attempting to update the first table (date line) in the Word document.
+2025-08-26 11:21:48,596 - INFO - SynoClim:359 - Attempting to populate the second table (precipitation data) in the Word document.
+2025-08-26 11:21:49,984 - INFO - SynoClim:389 - Finished populating Word document table.
+2025-08-26 11:21:49,984 - INFO - SynoClim:392 - Attempting to save filled Word document to: /home/aoumeur/BQRM_V01/BQCP24h/SynopClim_precip_table08260600.docx
+2025-08-26 11:21:49,995 - INFO - SynoClim:394 - Precipitation values successfully inserted and formatted in /home/aoumeur/BQRM_V01/BQCP24h/SynopClim_precip_table08260600.docx
+2025-08-26 11:21:49,995 - INFO - SynoClim:401 - Script SynoClim.py finished.
+2025-08-26 11:21:50,084 - INFO - system_utils:47 - Command 'python3' completed successfully.
+2025-08-26 11:21:50,084 - INFO - Bulletin:196 - SynoClim.py executed successfully.
+2025-08-26 11:21:50,084 - INFO - Bulletin:184 - Executing python3 send_MSG.py...
+2025-08-26 11:21:50,084 - INFO - system_utils:36 - Executing command: python3 send_MSG.py 2025 08 26 /home/aoumeur/BQRM_V01/BQCP24h in directory: '/home/aoumeur/BQRM_V01/BQCP24h'
+2025-08-26 11:21:50,148 - INFO - send_MSG:85 - Shared log file path from environment: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:21:50,148 - INFO - send_MSG:86 - Logger initialized for send_MSG. Log file: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h.log
+2025-08-26 11:21:50,148 - INFO - send_MSG:87 - Starting daily weather bulletin sending script.
+2025-08-26 11:21:50,148 - INFO - date_time_utils:56 - Processed dates - Today: 2025-08-26, Yesterday: 2025-08-25
+2025-08-26 11:21:50,148 - INFO - send_MSG:114 - File found and added for attachment: /home/aoumeur/BQRM_V01/BQCP24h/Cumul_table08260600.docx
+2025-08-26 11:21:50,148 - INFO - send_MSG:114 - File found and added for attachment: /home/aoumeur/BQRM_V01/BQCP24h/SynopClim_precip_table08260600.docx
+2025-08-26 11:21:50,148 - INFO - send_MSG:131 - Attempting to send email with subject: 'Bulletin du 26/08/2025' to aoumeurmohamed2404@gmail.com
+2025-08-26 11:21:50,148 - INFO - email_utils:30 - Attempting to send email from 'pnt@meteo.dz' to ['aoumeurmohamed2404@gmail.com'] with subject: 'Bulletin du 26/08/2025'
+2025-08-26 11:21:50,348 - INFO - email_utils:71 - Email successfully sent to 'aoumeurmohamed2404@gmail.com'.
+2025-08-26 11:21:50,350 - INFO - send_MSG:147 - Email process completed successfully.
+2025-08-26 11:21:50,350 - INFO - send_MSG:151 - Script execution finished.
+2025-08-26 11:21:50,377 - INFO - system_utils:47 - Command 'python3' completed successfully.
+2025-08-26 11:21:50,378 - INFO - Bulletin:196 - send_MSG.py executed successfully.
+2025-08-26 11:21:50,378 - INFO - Bulletin:211 - Starting post-processing and cleanup operations.
+2025-08-26 11:21:50,378 - INFO - Bulletin:215 - Moving *.txt files to /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08.
+2025-08-26 11:21:50,379 - INFO - file_operations:98 - Moved '20250826.txt' to '/home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08'.
+2025-08-26 11:21:50,379 - INFO - file_operations:98 - Moved 'Synop20250826-06.txt' to '/home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08'.
+2025-08-26 11:21:50,379 - INFO - Bulletin:226 - Removing *.docx files from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 11:21:50,380 - INFO - Bulletin:237 - Creating backup directories: /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08 and /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 11:21:50,380 - INFO - Bulletin:241 - Backup directories created successfully.
+2025-08-26 11:21:50,380 - INFO - Bulletin:249 - Copying SMAL* data from /bqrm_data/observations/2025/08/26 to /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 11:21:50,380 - INFO - file_operations:339 - Attempting to copy directory from '/bqrm_data/observations/2025/08/26' to '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26'.
+2025-08-26 11:21:50,381 - INFO - file_operations:355 - Destination directory '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26' exists. Removing it before copying.
+2025-08-26 11:21:50,385 - INFO - file_operations:370 - Successfully copied directory from '/bqrm_data/observations/2025/08/26' to '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26'.
+2025-08-26 11:21:50,385 - INFO - Bulletin:257 - TAC data copy to backup successful.
+2025-08-26 11:21:50,385 - INFO - Bulletin:263 - Script finished.
+2025-08-26 11:21:50,385 - INFO - Bulletin:277 - Cleaned up PYTAPS_SHARED_LOG_FILE environment variable.

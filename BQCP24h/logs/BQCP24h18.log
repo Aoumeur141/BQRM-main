@@ -1,0 +1,164 @@
+2025-08-26 10:38:33,349 - ERROR - Bulletin18:53 - Initial logger setup failed, using fallback console logger.
+2025-08-26 10:38:33,350 - INFO - Bulletin18:55 - Script started.
+2025-08-26 10:38:33,350 - INFO - Bulletin18:56 - Working directory (LOCAL_DIRECTORY): /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 10:38:33,350 - INFO - Bulletin18:58 - Shared log directory for children: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h18.log
+2025-08-26 10:38:33,350 - INFO - Bulletin18:71 - Date variables set: AA=2025, MM=08, DD=26
+2025-08-26 10:38:33,350 - INFO - Bulletin18:72 - Script's current working directory: PWD=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 10:38:33,350 - INFO - Bulletin18:85 - LOCAL_DIRECTORY set to: /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 10:38:33,350 - INFO - Bulletin18:86 - BUFR_INPUT_ROOT set to: /home/bufr_data/observations
+2025-08-26 10:38:33,350 - INFO - Bulletin18:87 - TAC_INPUT set to: /home/bqrm_data/observations
+2025-08-26 10:38:33,350 - INFO - Bulletin18:93 - Attempting to copy BUFR file from /home/bufr_data/observations/2025/08/26/Synop_202508260600.bufr to /home/aoumeur/BQRM_V01/BQCP24h/Synop/
+2025-08-26 10:38:33,350 - INFO - Bulletin18:98 - Directory /home/aoumeur/BQRM_V01/BQCP24h/Synop created/exists.
+2025-08-26 10:38:33,350 - WARNING - file_operations:242 - File not found: /home/bufr_data/observations/2025/08/26/Synop_202508260600.bufr. Skipping this operation.
+2025-08-26 10:38:33,351 - ERROR - Bulletin18:111 - Skipping BUFR copy as source file not found: /home/bufr_data/observations/2025/08/26/Synop_202508260600.bufr.
+2025-08-26 10:38:33,351 - WARNING - Bulletin18:132 - Skipping Python script execution due to previous BUFR file copy failure.
+2025-08-26 10:38:33,351 - INFO - Bulletin18:141 - Attempting to remove existing /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx.
+2025-08-26 10:38:33,351 - INFO - file_operations:171 - Successfully deleted file: /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx
+2025-08-26 10:38:33,351 - INFO - Bulletin18:144 - Successfully removed /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx.
+2025-08-26 10:38:33,351 - INFO - Bulletin18:155 - Moving /home/aoumeur/BQRM_V01/BQCP24h/agricole_08260600.xlsx to /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx.
+2025-08-26 10:38:33,351 - ERROR - Bulletin18:161 - ERROR: Source file agricole_08260600.xlsx not found in /home/aoumeur/BQRM_V01/BQCP24h. Cannot move.
+2025-08-26 10:38:33,351 - INFO - Bulletin18:167 - Creating directory /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08 if it doesn't exist.
+2025-08-26 10:38:33,351 - INFO - Bulletin18:170 - Directory /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08 created/exists.
+2025-08-26 10:38:33,351 - INFO - Bulletin18:174 - Moving all *.txt files from /home/aoumeur/BQRM_V01/BQCP24h to /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08.
+2025-08-26 10:38:33,352 - INFO - file_operations:90 - No files found matching pattern '*.txt' in '/home/aoumeur/BQRM_V01/BQCP24h'.
+2025-08-26 10:38:33,352 - WARNING - Bulletin18:182 - No *.txt files found to move.
+2025-08-26 10:38:33,352 - INFO - Bulletin18:188 - Removing all *.xlsx files in /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:38:33,352 - INFO - file_operations:283 - Starting cleanup of directory: /home/aoumeur/BQRM_V01/BQCP24h (Pattern: *.xlsx)
+2025-08-26 10:38:33,352 - INFO - file_operations:300 - Finished cleanup. Successfully deleted 0 files from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:38:33,352 - INFO - Bulletin18:196 - No *.xlsx files found in /home/aoumeur/BQRM_V01/BQCP24h to remove.
+2025-08-26 10:38:33,352 - INFO - Bulletin18:198 - Removing all *.docx files in /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:38:33,353 - INFO - file_operations:283 - Starting cleanup of directory: /home/aoumeur/BQRM_V01/BQCP24h (Pattern: *.docx)
+2025-08-26 10:38:33,353 - INFO - file_operations:300 - Finished cleanup. Successfully deleted 0 files from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:38:33,353 - INFO - Bulletin18:206 - No *.docx files found in /home/aoumeur/BQRM_V01/BQCP24h to remove.
+2025-08-26 10:38:33,353 - INFO - Bulletin18:210 - Removing all *.xlsx files in /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx.
+2025-08-26 10:38:33,353 - INFO - file_operations:283 - Starting cleanup of directory: /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx (Pattern: *.xlsx)
+2025-08-26 10:38:33,353 - INFO - file_operations:300 - Finished cleanup. Successfully deleted 0 files from /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx.
+2025-08-26 10:38:33,353 - INFO - Bulletin18:218 - No *.xlsx files found in /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx to remove.
+2025-08-26 10:38:33,353 - INFO - Bulletin18:223 - Creating backup directories: /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 10:38:33,354 - INFO - Bulletin18:226 - Backup directories created/exist.
+2025-08-26 10:38:33,354 - INFO - Bulletin18:234 - Copying contents from /home/bqrm_data/observations/2025/08/26 to /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 10:38:33,354 - INFO - file_operations:339 - Attempting to copy directory from '/home/bqrm_data/observations/2025/08/26' to '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26'.
+2025-08-26 10:38:33,354 - ERROR - file_operations:342 - Source directory not found: /home/bqrm_data/observations/2025/08/26
+2025-08-26 10:40:48,644 - ERROR - Bulletin18:53 - Initial logger setup failed, using fallback console logger.
+2025-08-26 10:40:48,644 - INFO - Bulletin18:55 - Script started.
+2025-08-26 10:40:48,644 - INFO - Bulletin18:56 - Working directory (LOCAL_DIRECTORY): /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 10:40:48,644 - INFO - Bulletin18:58 - Shared log directory for children: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h18.log
+2025-08-26 10:40:48,645 - INFO - Bulletin18:71 - Date variables set: AA=2025, MM=08, DD=26
+2025-08-26 10:40:48,645 - INFO - Bulletin18:72 - Script's current working directory: PWD=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 10:40:48,645 - INFO - Bulletin18:85 - LOCAL_DIRECTORY set to: /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 10:40:48,645 - INFO - Bulletin18:86 - BUFR_INPUT_ROOT set to: /home/bufr_data/observations
+2025-08-26 10:40:48,645 - INFO - Bulletin18:87 - TAC_INPUT set to: /home/bqrm_data/observations
+2025-08-26 10:40:48,645 - INFO - Bulletin18:93 - Attempting to copy BUFR file from /home/bufr_data/observations/2025/08/26/Synop_202508260600.bufr to /home/aoumeur/BQRM_V01/BQCP24h/Synop/
+2025-08-26 10:40:48,645 - INFO - Bulletin18:98 - Directory /home/aoumeur/BQRM_V01/BQCP24h/Synop created/exists.
+2025-08-26 10:40:48,645 - WARNING - file_operations:242 - File not found: /home/bufr_data/observations/2025/08/26/Synop_202508260600.bufr. Skipping this operation.
+2025-08-26 10:40:48,645 - ERROR - Bulletin18:111 - Skipping BUFR copy as source file not found: /home/bufr_data/observations/2025/08/26/Synop_202508260600.bufr.
+2025-08-26 10:40:48,645 - WARNING - Bulletin18:132 - Skipping Python script execution due to previous BUFR file copy failure.
+2025-08-26 10:40:48,645 - INFO - Bulletin18:148 - agricole.xlsx not found in /home/aoumeur/BQRM_V01/BQCP24h/templates. Skipping removal.
+2025-08-26 10:40:48,645 - INFO - Bulletin18:155 - Moving /home/aoumeur/BQRM_V01/BQCP24h/agricole_08260600.xlsx to /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx.
+2025-08-26 10:40:48,646 - ERROR - Bulletin18:161 - ERROR: Source file agricole_08260600.xlsx not found in /home/aoumeur/BQRM_V01/BQCP24h. Cannot move.
+2025-08-26 10:40:48,646 - INFO - Bulletin18:167 - Creating directory /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08 if it doesn't exist.
+2025-08-26 10:40:48,646 - INFO - Bulletin18:170 - Directory /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08 created/exists.
+2025-08-26 10:40:48,646 - INFO - Bulletin18:174 - Moving all *.txt files from /home/aoumeur/BQRM_V01/BQCP24h to /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08.
+2025-08-26 10:40:48,646 - INFO - file_operations:90 - No files found matching pattern '*.txt' in '/home/aoumeur/BQRM_V01/BQCP24h'.
+2025-08-26 10:40:48,646 - WARNING - Bulletin18:182 - No *.txt files found to move.
+2025-08-26 10:40:48,646 - INFO - Bulletin18:188 - Removing all *.xlsx files in /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:40:48,646 - INFO - file_operations:283 - Starting cleanup of directory: /home/aoumeur/BQRM_V01/BQCP24h (Pattern: *.xlsx)
+2025-08-26 10:40:48,647 - INFO - file_operations:300 - Finished cleanup. Successfully deleted 0 files from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:40:48,647 - INFO - Bulletin18:196 - No *.xlsx files found in /home/aoumeur/BQRM_V01/BQCP24h to remove.
+2025-08-26 10:40:48,647 - INFO - Bulletin18:198 - Removing all *.docx files in /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:40:48,647 - INFO - file_operations:283 - Starting cleanup of directory: /home/aoumeur/BQRM_V01/BQCP24h (Pattern: *.docx)
+2025-08-26 10:40:48,648 - INFO - file_operations:300 - Finished cleanup. Successfully deleted 0 files from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:40:48,648 - INFO - Bulletin18:206 - No *.docx files found in /home/aoumeur/BQRM_V01/BQCP24h to remove.
+2025-08-26 10:40:48,648 - INFO - Bulletin18:210 - Removing all *.xlsx files in /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx.
+2025-08-26 10:40:48,648 - INFO - file_operations:283 - Starting cleanup of directory: /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx (Pattern: *.xlsx)
+2025-08-26 10:40:48,648 - INFO - file_operations:300 - Finished cleanup. Successfully deleted 0 files from /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx.
+2025-08-26 10:40:48,648 - INFO - Bulletin18:218 - No *.xlsx files found in /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx to remove.
+2025-08-26 10:40:48,648 - INFO - Bulletin18:223 - Creating backup directories: /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 10:40:48,648 - INFO - Bulletin18:226 - Backup directories created/exist.
+2025-08-26 10:40:48,648 - INFO - Bulletin18:234 - Copying contents from /home/bqrm_data/observations/2025/08/26 to /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 10:40:48,648 - INFO - file_operations:339 - Attempting to copy directory from '/home/bqrm_data/observations/2025/08/26' to '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26'.
+2025-08-26 10:40:48,648 - ERROR - file_operations:342 - Source directory not found: /home/bqrm_data/observations/2025/08/26
+2025-08-26 10:50:56,615 - ERROR - Bulletin18:52 - Initial logger setup failed, using fallback console logger.
+2025-08-26 10:50:56,615 - INFO - Bulletin18:54 - Script started.
+2025-08-26 10:50:56,615 - INFO - Bulletin18:55 - Working directory (LOCAL_DIRECTORY): /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 10:50:56,616 - INFO - Bulletin18:57 - Shared log directory for children: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h18.log
+2025-08-26 10:50:56,616 - INFO - Bulletin18:70 - Date variables set: AA=2025, MM=08, DD=26
+2025-08-26 10:50:56,616 - INFO - Bulletin18:71 - Script's current working directory: PWD=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 10:50:56,616 - INFO - Bulletin18:93 - LOCAL_DIRECTORY set to: /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 10:50:56,616 - INFO - Bulletin18:94 - BUFR_INPUT_ROOT set to: /home/aoumeur/BQRM_V01/bufr_data/observations
+2025-08-26 10:50:56,616 - INFO - Bulletin18:95 - TAC_INPUT set to: /bqrm_data/observations
+2025-08-26 10:50:56,616 - INFO - Bulletin18:101 - Attempting to copy BUFR file from /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/26/Synop_202508260600.bufr to /home/aoumeur/BQRM_V01/BQCP24h/Synop/
+2025-08-26 10:50:56,616 - INFO - Bulletin18:106 - Directory /home/aoumeur/BQRM_V01/BQCP24h/Synop created/exists.
+2025-08-26 10:50:56,616 - WARNING - file_operations:242 - File not found: /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/26/Synop_202508260600.bufr. Skipping this operation.
+2025-08-26 10:50:56,616 - ERROR - Bulletin18:119 - Skipping BUFR copy as source file not found: /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/26/Synop_202508260600.bufr.
+2025-08-26 10:50:56,616 - WARNING - Bulletin18:147 - Skipping Python script execution due to previous BUFR file copy failure.
+2025-08-26 10:50:56,617 - INFO - Bulletin18:164 - agricole.xlsx not found in /home/aoumeur/BQRM_V01/BQCP24h/templates. Skipping removal.
+2025-08-26 10:50:56,617 - INFO - Bulletin18:171 - Moving /home/aoumeur/BQRM_V01/BQCP24h/agricole_08260600.xlsx to /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx.
+2025-08-26 10:50:56,617 - ERROR - Bulletin18:177 - ERROR: Source file agricole_08260600.xlsx not found in /home/aoumeur/BQRM_V01/BQCP24h. Cannot move.
+2025-08-26 10:50:56,617 - INFO - Bulletin18:183 - Creating directory /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08 if it doesn't exist.
+2025-08-26 10:50:56,617 - INFO - Bulletin18:186 - Directory /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08 created/exists.
+2025-08-26 10:50:56,617 - INFO - Bulletin18:190 - Moving all *.txt files from /home/aoumeur/BQRM_V01/BQCP24h to /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08.
+2025-08-26 10:50:56,617 - INFO - file_operations:90 - No files found matching pattern '*.txt' in '/home/aoumeur/BQRM_V01/BQCP24h'.
+2025-08-26 10:50:56,617 - WARNING - Bulletin18:198 - No *.txt files found to move.
+2025-08-26 10:50:56,617 - INFO - Bulletin18:204 - Removing all *.xlsx files in /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:50:56,618 - INFO - file_operations:283 - Starting cleanup of directory: /home/aoumeur/BQRM_V01/BQCP24h (Pattern: *.xlsx)
+2025-08-26 10:50:56,618 - INFO - file_operations:300 - Finished cleanup. Successfully deleted 0 files from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:50:56,618 - INFO - Bulletin18:212 - No *.xlsx files found in /home/aoumeur/BQRM_V01/BQCP24h to remove.
+2025-08-26 10:50:56,618 - INFO - Bulletin18:214 - Removing all *.docx files in /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:50:56,618 - INFO - file_operations:283 - Starting cleanup of directory: /home/aoumeur/BQRM_V01/BQCP24h (Pattern: *.docx)
+2025-08-26 10:50:56,619 - INFO - file_operations:300 - Finished cleanup. Successfully deleted 0 files from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:50:56,619 - INFO - Bulletin18:222 - No *.docx files found in /home/aoumeur/BQRM_V01/BQCP24h to remove.
+2025-08-26 10:50:56,619 - INFO - Bulletin18:226 - Removing all *.xlsx files in /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx.
+2025-08-26 10:50:56,619 - INFO - file_operations:283 - Starting cleanup of directory: /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx (Pattern: *.xlsx)
+2025-08-26 10:50:56,619 - INFO - file_operations:300 - Finished cleanup. Successfully deleted 0 files from /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx.
+2025-08-26 10:50:56,619 - INFO - Bulletin18:234 - No *.xlsx files found in /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx to remove.
+2025-08-26 10:50:56,619 - INFO - Bulletin18:239 - Creating backup directories: /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 10:50:56,619 - INFO - Bulletin18:242 - Backup directories created/exist.
+2025-08-26 10:50:56,619 - INFO - Bulletin18:253 - Copying contents from /bqrm_data/observations/2025/08/26 to /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 10:50:56,619 - INFO - file_operations:339 - Attempting to copy directory from '/bqrm_data/observations/2025/08/26' to '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26'.
+2025-08-26 10:50:56,620 - INFO - file_operations:355 - Destination directory '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26' exists. Removing it before copying.
+2025-08-26 10:50:56,623 - INFO - file_operations:370 - Successfully copied directory from '/bqrm_data/observations/2025/08/26' to '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26'.
+2025-08-26 10:50:56,623 - INFO - Bulletin18:262 - Successfully backed up SMAL* files to /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 10:50:56,623 - INFO - Bulletin18:267 - Script finished.
+2025-08-26 10:50:59,478 - ERROR - Bulletin18:52 - Initial logger setup failed, using fallback console logger.
+2025-08-26 10:50:59,478 - INFO - Bulletin18:54 - Script started.
+2025-08-26 10:50:59,478 - INFO - Bulletin18:55 - Working directory (LOCAL_DIRECTORY): /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 10:50:59,478 - INFO - Bulletin18:57 - Shared log directory for children: /home/aoumeur/BQRM_V01/BQCP24h/logs/BQCP24h18.log
+2025-08-26 10:50:59,478 - INFO - Bulletin18:70 - Date variables set: AA=2025, MM=08, DD=26
+2025-08-26 10:50:59,478 - INFO - Bulletin18:71 - Script's current working directory: PWD=/home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 10:50:59,479 - INFO - Bulletin18:93 - LOCAL_DIRECTORY set to: /home/aoumeur/BQRM_V01/BQCP24h
+2025-08-26 10:50:59,479 - INFO - Bulletin18:94 - BUFR_INPUT_ROOT set to: /home/aoumeur/BQRM_V01/bufr_data/observations
+2025-08-26 10:50:59,479 - INFO - Bulletin18:95 - TAC_INPUT set to: /bqrm_data/observations
+2025-08-26 10:50:59,479 - INFO - Bulletin18:101 - Attempting to copy BUFR file from /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/26/Synop_202508260600.bufr to /home/aoumeur/BQRM_V01/BQCP24h/Synop/
+2025-08-26 10:50:59,479 - INFO - Bulletin18:106 - Directory /home/aoumeur/BQRM_V01/BQCP24h/Synop created/exists.
+2025-08-26 10:50:59,479 - WARNING - file_operations:242 - File not found: /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/26/Synop_202508260600.bufr. Skipping this operation.
+2025-08-26 10:50:59,479 - ERROR - Bulletin18:119 - Skipping BUFR copy as source file not found: /home/aoumeur/BQRM_V01/bufr_data/observations/2025/08/26/Synop_202508260600.bufr.
+2025-08-26 10:50:59,479 - WARNING - Bulletin18:147 - Skipping Python script execution due to previous BUFR file copy failure.
+2025-08-26 10:50:59,479 - INFO - Bulletin18:164 - agricole.xlsx not found in /home/aoumeur/BQRM_V01/BQCP24h/templates. Skipping removal.
+2025-08-26 10:50:59,479 - INFO - Bulletin18:171 - Moving /home/aoumeur/BQRM_V01/BQCP24h/agricole_08260600.xlsx to /home/aoumeur/BQRM_V01/BQCP24h/templates/agricole.xlsx.
+2025-08-26 10:50:59,479 - ERROR - Bulletin18:177 - ERROR: Source file agricole_08260600.xlsx not found in /home/aoumeur/BQRM_V01/BQCP24h. Cannot move.
+2025-08-26 10:50:59,480 - INFO - Bulletin18:183 - Creating directory /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08 if it doesn't exist.
+2025-08-26 10:50:59,480 - INFO - Bulletin18:186 - Directory /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08 created/exists.
+2025-08-26 10:50:59,480 - INFO - Bulletin18:190 - Moving all *.txt files from /home/aoumeur/BQRM_V01/BQCP24h to /home/aoumeur/BQRM_V01/BQCP24h/txt/2025/08.
+2025-08-26 10:50:59,480 - INFO - file_operations:90 - No files found matching pattern '*.txt' in '/home/aoumeur/BQRM_V01/BQCP24h'.
+2025-08-26 10:50:59,480 - WARNING - Bulletin18:198 - No *.txt files found to move.
+2025-08-26 10:50:59,480 - INFO - Bulletin18:204 - Removing all *.xlsx files in /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:50:59,480 - INFO - file_operations:283 - Starting cleanup of directory: /home/aoumeur/BQRM_V01/BQCP24h (Pattern: *.xlsx)
+2025-08-26 10:50:59,481 - INFO - file_operations:300 - Finished cleanup. Successfully deleted 0 files from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:50:59,481 - INFO - Bulletin18:212 - No *.xlsx files found in /home/aoumeur/BQRM_V01/BQCP24h to remove.
+2025-08-26 10:50:59,481 - INFO - Bulletin18:214 - Removing all *.docx files in /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:50:59,481 - INFO - file_operations:283 - Starting cleanup of directory: /home/aoumeur/BQRM_V01/BQCP24h (Pattern: *.docx)
+2025-08-26 10:50:59,481 - INFO - file_operations:300 - Finished cleanup. Successfully deleted 0 files from /home/aoumeur/BQRM_V01/BQCP24h.
+2025-08-26 10:50:59,482 - INFO - Bulletin18:222 - No *.docx files found in /home/aoumeur/BQRM_V01/BQCP24h to remove.
+2025-08-26 10:50:59,482 - INFO - Bulletin18:226 - Removing all *.xlsx files in /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx.
+2025-08-26 10:50:59,482 - INFO - file_operations:283 - Starting cleanup of directory: /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx (Pattern: *.xlsx)
+2025-08-26 10:50:59,482 - INFO - file_operations:300 - Finished cleanup. Successfully deleted 0 files from /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx.
+2025-08-26 10:50:59,482 - INFO - Bulletin18:234 - No *.xlsx files found in /home/aoumeur/BQRM_V01/BQCP24h/Climxlsx to remove.
+2025-08-26 10:50:59,482 - INFO - Bulletin18:239 - Creating backup directories: /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 10:50:59,482 - INFO - Bulletin18:242 - Backup directories created/exist.
+2025-08-26 10:50:59,482 - INFO - Bulletin18:253 - Copying contents from /bqrm_data/observations/2025/08/26 to /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 10:50:59,482 - INFO - file_operations:339 - Attempting to copy directory from '/bqrm_data/observations/2025/08/26' to '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26'.
+2025-08-26 10:50:59,482 - INFO - file_operations:355 - Destination directory '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26' exists. Removing it before copying.
+2025-08-26 10:50:59,486 - INFO - file_operations:370 - Successfully copied directory from '/bqrm_data/observations/2025/08/26' to '/home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26'.
+2025-08-26 10:50:59,486 - INFO - Bulletin18:262 - Successfully backed up SMAL* files to /home/aoumeur/BQRM_V01/BQCP24h/Backup/2025/08/26.
+2025-08-26 10:50:59,486 - INFO - Bulletin18:267 - Script finished.
